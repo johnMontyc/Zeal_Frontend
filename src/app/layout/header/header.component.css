@@ -1,0 +1,45 @@
+/* Header styles */
+.home-button {
+  cursor: pointer;
+  color: #28af60;
+  transition: color 0.3s ease;
+}
+
+.home-button:hover {
+  color: #28af60;
+}
+
+header {
+    padding: 40px 0;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  header nav a {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  header nav a:hover {
+    background: hsl(145, 63%, 42%);
+    color: white;
+  }
