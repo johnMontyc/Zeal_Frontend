@@ -1,0 +1,29 @@
+<section class="team-section">
+  <h2>Nuestro Equipo</h2>
+  
+  <div class="team-row">
+    <div class="team-member-card" *ngFor="let member of teamMembers">
+      <div class="member-image">
+        <img [src]="member.image" [alt]="member.name">
+      </div>
+      <h3>{{member.name}}</h3>
+      <p class="position">{{member.position}}</p>
+      <div class="social-links">
+        <a [href]="member.linkedin" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="social-link"
+           *ngIf="member.linkedin">
+           <i class="fab fa-linkedin"></i>
+        </a>
+        <a [href]="member.github" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="social-link"
+           *ngIf="member.github">
+           <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
