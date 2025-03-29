@@ -27,7 +27,7 @@ export class TeamComponent {
     {
       name: 'Juan Gil',
       position: 'Backend Developer',
-      image: 'assets/team/.jpg',
+      image: 'assets/team/juan-gil.jpg',
       linkedin: 'https://www.linkedin.com/in//',
       github: 'https://github.com/'
     },
