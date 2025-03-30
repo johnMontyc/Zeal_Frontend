@@ -1,8 +1,98 @@
+/* 🌈 Footer con efecto de luces dinámicas */
 footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    color: #2e7d32;
-    font-size: 0.9em;
-    animation: fadeIn 1s ease-out;
-  }
+  background: linear-gradient(135deg, #1b5e20, #28af60, #60d394);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -6px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* ✨ Efecto de luces futuristas en el fondo */
+footer::before {
+  content: "";
+  position: absolute;
+  width: 250%;
+  height: 250%;
+  top: -75%;
+  left: -75%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 15%, transparent 60%);
+  animation: sparkles 8s infinite linear;
+}
+
+/* 💫 Animación de los destellos */
+@keyframes sparkles {
+  0% { transform: rotate(0deg); opacity: 0.5; }
+  50% { transform: rotate(180deg); opacity: 0.7; }
+  100% { transform: rotate(360deg); opacity: 0.5; }
+}
+
+/* 📝 Texto con efecto de brillo al pasar el cursor */
+footer p {
+  margin: 12px 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+}
+
+footer p:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.7);
+}
+
+/* 🚀 Redes sociales con animaciones brutales */
+.footer-socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🔥 Botones con efecto de luces neón */
+.footer-socials a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff0099, #ffcc00);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  box-shadow: 0px 0px 15px rgba(255, 0, 153, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Efecto neón al pasar el mouse */
+.footer-socials a:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0px 0px 25px rgba(255, 204, 0, 1);
+  background: linear-gradient(135deg, #ffcc00, #ff0099);
+}
+
+/* 🌟 Partículas eléctricas alrededor del ícono */
+.footer-socials a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 💥 Efecto de explosión al pasar el mouse */
+.footer-socials a:hover::before {
+  opacity: 1;
+  transform: scale(1.5);
+}
