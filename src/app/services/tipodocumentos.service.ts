@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Tipo_documentosService {
-  private baseUrl = 'https://localhost:8080/api/v1/tipo_documento';
+  private baseUrl = 'https://localhost:8080/api/v1/tipo_documentos';
 
   constructor(private http:HttpClient) { }
   
@@ -18,12 +18,12 @@ export class Tipo_documentosService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
   
-  createTipo_Documento(tipo_Documento: Object): Observable<Object> {
-    return this.http.post(this.baseUrl, tipo_Documento);
+  createTipo_Documento(tipo_documento: Object): Observable<Object> {
+    return this.http.post(this.baseUrl, tipo_documento);
   }
   
-  updateTipo_Documento(id: number, tipo_Documento: Object): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, tipo_Documento);
+  updateTipo_Documento(id: number, tipo_documento: Object): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, tipo_documento);
   }
   
   deleteTipo_Documento(id: number): Observable<any> {

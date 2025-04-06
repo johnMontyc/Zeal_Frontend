@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ZealService {
+export class UsuariosService {
   private baseUrl = 'https://localhost:8080/api/v1/usuarios';
   constructor(private http:HttpClient) { }
 
