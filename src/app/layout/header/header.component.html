@@ -1,15 +1,15 @@
-<header class="animate-slide-down">
-  <h1 class="home-button animate-fade-in" (click)="navigateToHome()">
+<header>
+  <h1 class="home-button" (click)="navigateToHome()">
     <img src="assets/logo/logo-Zeal.jpg" alt="Zeal Logo" class="logo-img">
-  </h1> 
+  </h1>
+
   <nav>
-    <a routerLink="/about" routerLinkActive="active">Nosotros</a>
+    <a routerLink="/team" routerLinkActive="active">Nosotros</a>
     <a routerLink="/our-services" routerLinkActive="active">Servicios</a>
   </nav>
 
-  <!-- Sección de Login -->
   <div class="login-section">
-    <a routerLink="/login" class="login-btn">Iniciar Sesión</a>
-    <a routerLink="/register" class="register-btn">Registrarse</a>
+    <a routerLink="/login" class="login-btn" routerLinkActive="active">Iniciar Sesión</a>
+    <a routerLink="/register" class="register-btn" routerLinkActive="active">Registrarse</a>
   </div>
 </header>

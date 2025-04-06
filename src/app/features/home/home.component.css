@@ -1,80 +1,130 @@
+/* Importar la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilo general del cuerpo */
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #E0F7FA, #FFFFFF);
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   min-height: 100vh;
-  padding: 300px;
+  padding: 200px 20px 100px 20px;
+  
+  box-sizing: border-box;
 }
 
+/* Contenedor de las tarjetas de perfiles */
 .profiles-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* más compacto */
+  gap: 20px;
+  max-width: 1100px;
+  padding: 10px;
 }
 
+/* Tarjeta de perfil más pequeña */
 .profile-card {
-  /* Tarjeta de perfil */
-  background: white;
+  background: #f0fdf4;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
   text-align: center;
-  padding: 25px;
+  padding: 20px 15px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #c3f1cb;
+  backdrop-filter: blur(4px);
 }
 
 .profile-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 100, 50, 0.1);
 }
 
+/* Imagen redonda más pequeña */
 .profile-img {
-  /* Imagen de perfil general */
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 4px solid #00BCD4;
+  border: 3px solid #4dd0e1;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-/* Ajuste individual para la imagen de John */
-#john .profile-img {
-  margin-bottom: 20px; /* Ajusta este valor para subir la imagen de John */
-}
-
+/* Nombre del perfil con letra más bonita y tamaño menor */
 .profile-name {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin: 8px 0;
-  color: #333;
+  color: #2e7d32;
 }
 
+/* Descripción del servicio */
 .profile-service {
-  font-size: 1rem;
-  color: #666;
+  font-size: 0.9rem;
+  color: #555;
   margin-bottom: 15px;
+  line-height: 1.3;
 }
 
+/* Botón de contacto más pequeño */
 .contact-btn {
-  /* Botón de contacto */
-  background: linear-gradient(135deg, #00BCD4, #4CAF50);
+  background: linear-gradient(135deg, #4dd0e1, #81c784);
   border: none;
   color: white;
-  padding: 12px 18px;
-  font-size: 1rem;
-  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
+  box-shadow: 0 4px 12px rgba(77, 208, 225, 0.3);
 }
 
 .contact-btn:hover {
-  background: linear-gradient(135deg, #4CAF50, #00BCD4);
-  transform: scale(1.08);
+  background: linear-gradient(135deg, #66bb6a, #4dd0e1);
+  transform: scale(1.06);
+}
+
+
+/* Fondo con slider de imágenes naturales */
+.background-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideAnimation 40s infinite;
+}
+
+/* Delays para 10 fondos */
+.background-slider .slide:nth-child(1) { animation-delay: 0s; }
+.background-slider .slide:nth-child(2) { animation-delay: 4s; }
+.background-slider .slide:nth-child(3) { animation-delay: 8s; }
+.background-slider .slide:nth-child(4) { animation-delay: 12s; }
+.background-slider .slide:nth-child(5) { animation-delay: 16s; }
+.background-slider .slide:nth-child(6) { animation-delay: 20s; }
+.background-slider .slide:nth-child(7) { animation-delay: 24s; }
+.background-slider .slide:nth-child(8) { animation-delay: 28s; }
+.background-slider .slide:nth-child(9) { animation-delay: 32s; }
+.background-slider .slide:nth-child(10){ animation-delay: 36s; }
+
+/* Animación del slider */
+@keyframes slideAnimation {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  15%  { opacity: 1; }
+  20%  { opacity: 0; }
+  100% { opacity: 0; }
 }

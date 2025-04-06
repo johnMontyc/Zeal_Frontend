@@ -18,29 +18,6 @@ import { CategoriasListComponent } from './components/categorias/list/list.compo
     CategoriasListComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: [
-    trigger('slideAnimation', [
-      state('*', style({
-        transform: 'translateX(0)',
-        opacity: 1
-      })),
-      transition(':enter', [
-        style({
-          transform: 'translateX(-100%)',
-          opacity: 0
-        }),
-        animate('0.3s ease-out')
-      ]),
-      transition(':leave', [
-        animate('0.3s ease-in', style({
-          transform: 'translateX(100%)',
-          opacity: 0
-        }))
-      ])
-    ])
-  ]
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'ZealTest';
-}
+export class AppComponent {}

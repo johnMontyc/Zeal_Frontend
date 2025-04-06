@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #d4f8e8, #b8e4c9); /* Fondo degradado verde claro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Fondo difuminado oscuro */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Ventana modal */
+.login-modal {
+  position: relative;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid rgba(163, 217, 165, 0.5); /* Borde verde claro */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra difuminada */
+  text-align: center;
+  backdrop-filter: blur(10px); /* Efecto de difuminado */
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+.login-modal h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1b5e20; /* Verde oscuro */
+}
+
+/* Estilos del formulario */
+.login-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid rgba(163, 217, 165, 0.6); /* Borde verde claro */
+  border-radius: 6px;
+  background-color: rgba(240, 255, 240, 0.9); /* Fondo blanco con un toque verde */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #66bb6a; /* Verde más vibrante */
+  box-shadow: 0 0 10px rgba(102, 187, 106, 0.6); /* Sombra verde más suave */
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50; /* Verde principal */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #388e3c; /* Verde más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50; /* Verde principal */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background-color: #388e3c; /* Verde más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Enlace inferior */
+.link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.link a {
+  color: #1b5e20; /* Verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  border: 2px solid #e53935; /* Borde rojo */
+  border-radius: 50%; /* Hace que sea un círculo */
+  font-size: 1.5rem; /* Tamaño de la "X" */
+  font-weight: bold;
+  color: #e53935; /* Rojo vibrante */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #e53935; /* Fondo rojo sólido */
+  color: white; /* Cambia la "X" a blanco */
+  transform: scale(1.2); /* Efecto de agrandamiento */
+}
+
+.close-btn:focus {
+  outline: none; /* Elimina el borde de enfoque */
+}

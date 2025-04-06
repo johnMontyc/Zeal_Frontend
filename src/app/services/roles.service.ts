@@ -27,6 +27,7 @@ export class RolesService {
   }
 
   deleteRol(id: number): Observable<any> {
+
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
   
