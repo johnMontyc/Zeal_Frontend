@@ -1,0 +1,170 @@
+/* ✨ Fuente femenina y suave */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+/* 🔹 Sección del equipo */
+.team-section {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, rgba(250, 225, 226, 0.9), rgba(210, 230, 250, 0.9));
+  padding: 180px 20px 60px 20px; /* MÁS ABAJO */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* 🌊 Fondo animado sutil */
+@keyframes fondo-movimiento {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.team-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, #fce4ec, #e0f7fa, #f3e5f5);
+  background-size: 200% 200%;
+  animation: fondo-movimiento 10s ease-in-out infinite;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* 🎀 Título encantador */
+.team-section h2 {
+  font-size: 2.8rem;
+  color: #5a5a5a;
+  margin-bottom: 40px;
+  font-weight: 600;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* 🧩 Distribución de tarjetas */
+.team-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* 💌 Tarjetas delicadas */
+.team-member-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  width: 270px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(180, 180, 180, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 22px rgba(150, 150, 150, 0.25);
+}
+
+/* 📸 Imagen con glow pastel */
+.member-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: transform 0.3s ease;
+  
+}
+
+
+
+/* 🧍 Foto del miembro */
+.member-image img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* 🧍‍♂️ Zoom especial para John */
+.team-member-card.john .member-image img {
+  transform: scale(1.08);
+}
+
+/* 🧾 Nombre y cargo */
+.team-member-card h3 {
+  font-size: 1.3rem;
+  color: #5b5b5b;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+.team-member-card .position {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* 🎨 Línea decorativa */
+.member-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #eac0a2, #a3d5f7);
+  margin: 10px auto 15px;
+  border-radius: 3px;
+}
+
+/* 🔗 Redes sociales elegantes */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+/* 🌟 Iconos 3D suaves */
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.8),
+              inset 3px 3px 5px rgba(140, 140, 140, 0.2);
+}
+
+/* 🎭 Estilo café suave */
+.social-link.linkedin {
+  background: linear-gradient(145deg, #d4b7a5, #b9957e);
+  color: #5c3d2e;
+  box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.8),
+              inset 3px 3px 8px rgba(92, 61, 46, 0.3);
+}
+
+.social-link.github {
+  background: linear-gradient(145deg, #c2a78b, #9b7e64);
+  color: #4f3b2a;
+  box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.8),
+              inset 3px 3px 8px rgba(79, 59, 42, 0.3);
+}
+
+/* 💫 Hover bonito */
+.social-link:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(163, 213, 247, 0.5);
+}
+
+.social-link.linkedin:hover {
+  background: linear-gradient(145deg, #bfa28f, #a27f6d);
+  color: #fff;
+}
+
+.social-link.github:hover {
+  background: linear-gradient(145deg, #b2967c, #846b58);
+  color: #fff;
+}
