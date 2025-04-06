@@ -13,20 +13,21 @@ export class RolesService {
   getAllRoles(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
-  
-  getRoleById(id: number): Observable<any> {
+
+  getRolById(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
-  
-  createRoles(rol: Object): Observable<Object> {
+
+  createRol(rol: Object): Observable<Object> {
     return this.http.post(this.baseUrl, rol);
   }
-  
-  updateRoles(id: number, rol: Object): Observable<Object> {
+
+  updateRol(id: number, rol: Object): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, rol);
   }
-  
-  deleteRoles(id: number): Observable<any> {
+
+  deleteRol(id: number): Observable<any> {
+
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
   

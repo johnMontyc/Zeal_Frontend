@@ -5,6 +5,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { CategoriasListComponent } from './components/categorias/list/list.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
+    CategoriasListComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
