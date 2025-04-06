@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -98,7 +99,7 @@ export class HomeComponent {
     }
   ];
 
-  constructor(private fb: FormBuilder, private sanitizer: DomSanitizer) {
+  constructor(private fb: FormBuilder, private sanitizer: DomSanitizer, private router: Router) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -141,5 +142,9 @@ export class HomeComponent {
       this.newsletterEmail = '';
       alert('¡Gracias por suscribirte a nuestro boletín!');
     }
+  }
+
+  goToProfile(workerId: string): void {
+    this.router.navigate(['/profile-worker', workerId]);
   }
 }

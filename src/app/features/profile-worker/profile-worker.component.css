@@ -1,0 +1,145 @@
+.profile-worker {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 150px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Fondo con degradado */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  font-family: 'Quicksand', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-worker:hover {
+  transform: scale(1.02); /* Efecto de agrandamiento */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 8px 8px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 4px solid #1e88e5; /* Azul principal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: rotate(5deg) scale(1.1); /* Rotación y agrandamiento */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1e88e5; /* Azul principal */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra en el texto */
+}
+
+.profile-info .role {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+}
+
+.profile-info .location {
+  font-size: 1rem;
+  color: #777;
+}
+
+.profile-functions h3,
+.profile-details h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #1e88e5; /* Azul principal */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #1e88e5; /* Línea decorativa */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.profile-functions ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.profile-functions ul li {
+  margin-bottom: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-functions ul li:hover {
+  color: #1e88e5; /* Azul principal */
+  transform: translateX(5px); /* Movimiento hacia la derecha */
+}
+
+.profile-details p {
+  margin: 5px 0;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.profile-details p:hover {
+  color: #1e88e5; /* Azul principal */
+}
+
+.profile-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.message-btn {
+  padding: 12px 25px;
+  background: linear-gradient(145deg, #1e88e5, #1565c0); /* Degradado azul */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-btn:hover {
+  background: linear-gradient(145deg, #1565c0, #1e88e5); /* Inversión del degradado */
+  transform: scale(1.1); /* Agrandamiento */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.message-btn:active {
+  transform: scale(0.95); /* Efecto de clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+.register-message {
+  margin-top: 10px;
+  padding: 10px;
+  background: linear-gradient(145deg, #e8f5e9, #c8e6c9); /* Degradado verde */
+  color: #388e3c; /* Verde oscuro */
+  border: 1px solid #388e3c;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

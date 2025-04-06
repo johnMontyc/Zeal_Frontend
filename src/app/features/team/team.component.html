@@ -1,29 +1,75 @@
 <section class="team-section">
-  <h2>Nuestro Equipo</h2>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+  </head>
   
+  <h2>Nuestro Equipo</h2>
   <div class="team-row">
-    <div class="team-member-card" *ngFor="let member of teamMembers">
+    <!-- Miembro: Juan -->
+    <div class="team-member-card">
       <div class="member-image">
-        <img [src]="member.image" [alt]="member.name">
+        <img src="assets/team/juan.jpg" alt="Foto de Juan">
       </div>
-      <h3>{{member.name}}</h3>
-      <p class="position">{{member.position}}</p>
+      <h3>Juan</h3>
+      <p class="position">Desarrollador</p>
       <div class="social-links">
-        <a [href]="member.linkedin" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="social-link"
-           *ngIf="member.linkedin">
-           <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/juan-diego-gil-roldan-8b5883332/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
         </a>
-        <a [href]="member.github" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="social-link"
-           *ngIf="member.github">
-           <i class="fab fa-github"></i>
+        <a href="https://github.com/Juangil56" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-github"></i>
         </a>
       </div>
+    </div>
+    <!-- Miembro: Issa -->
+    <div class="team-member-card">
+      <div class="member-image">
+        <img src="assets/team/issa.jpg" alt="Foto de Issa">
+      </div>
+      <h3>Issa</h3>
+      <p class="position">Desarrolladora</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/issa-cooper-moretti-b9a3b5324/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/ISSACOOPER" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Miembro: John -->
+    <div class="team-member-card">
+      <div class="member-image">
+        <img src="assets/team/john.jpg" alt="Foto de John">
+      </div>
+      <h3>John</h3>
+      <p class="position">Desarrollador</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/john-fernando-montoya-carvajal-366166327/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/johnMontyc" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Miembro: Luis -->
+    <div class="team-member-card">
+      <div class="member-image">
+        <img src="assets/team/luis.jpg" alt="Foto de Luis">
+      </div>
+      <h3>Luis</h3>
+      <p class="position">Desarrollador</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/luis-mart%C3%ADnez-3a9881343/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/malucefe" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      
     </div>
   </div>
 </section>

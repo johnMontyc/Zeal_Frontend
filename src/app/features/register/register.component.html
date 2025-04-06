@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="register.component.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Crear Cuenta</h2>
+    <form (submit)="onRegister($event)">
+      <input type="text" placeholder="Nombre completo" required>
+      <input 
+        type="text" 
+        placeholder="Número de identificación" 
+        pattern="[0-9]+" 
+        title="Solo se permiten números" 
+        required>
+      <input type="text" placeholder="Dirección" required>
+      <input 
+        type="tel" 
+        placeholder="Teléfono" 
+        pattern="[0-9]+" 
+        title="Solo se permiten números" 
+        required>
+      <button type="submit">Registrarme</button>
+    </form>
+    <div class="link">
+      <a (click)="showLoginMessage()" (click)="navigateToLogin()" class="link login-link" role="button" tabindex="0">
+        ¿Ya tienes cuenta? <strong>Inicia sesión</strong>
+      </a>
+    </div>
+
+    <!-- Mensaje de registro exitoso -->
+    <div *ngIf="registerMessage" class="register-message">
+      <p>{{ registerMessage }}</p>
+    </div>
+  </div>
+
+</body>
+</html>
