@@ -83,3 +83,14 @@ form button:hover {
 .link a:hover {
   text-decoration: underline;
 }
+
+.login-message {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e8f5e9; /* Verde claro */
+  color: #388e3c; /* Verde oscuro */
+  border: 1px solid #388e3c;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}

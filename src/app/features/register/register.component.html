@@ -11,16 +11,32 @@
 
   <div class="register-container">
     <h2>Crear Cuenta</h2>
-    <form>
+    <form (submit)="onRegister($event)">
       <input type="text" placeholder="Nombre completo" required>
-      <input type="text" placeholder="Número de identificación" required>
+      <input 
+        type="text" 
+        placeholder="Número de identificación" 
+        pattern="[0-9]+" 
+        title="Solo se permiten números" 
+        required>
       <input type="text" placeholder="Dirección" required>
-      <input type="tel" placeholder="Teléfono" required>
+      <input 
+        type="tel" 
+        placeholder="Teléfono" 
+        pattern="[0-9]+" 
+        title="Solo se permiten números" 
+        required>
       <button type="submit">Registrarme</button>
     </form>
     <div class="link">
-      ¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión</a>
-      
+      <a (click)="showLoginMessage()" (click)="navigateToLogin()" class="link login-link" role="button" tabindex="0">
+        ¿Ya tienes cuenta? <strong>Inicia sesión</strong>
+      </a>
+    </div>
+
+    <!-- Mensaje de registro exitoso -->
+    <div *ngIf="registerMessage" class="register-message">
+      <p>{{ registerMessage }}</p>
     </div>
   </div>
 

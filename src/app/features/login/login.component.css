@@ -167,3 +167,25 @@ form button:hover {
 .close-btn:focus {
   outline: none; /* Elimina el borde de enfoque */
 }
+
+.register-message {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e0f7fa; /* Azul claro */
+  color: #00796b; /* Verde oscuro */
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-message {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e8f5e9; /* Verde claro */
+  color: #388e3c; /* Verde oscuro */
+  border: 1px solid #388e3c;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
