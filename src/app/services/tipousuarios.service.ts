@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Tipo_usuariosService {
-  private baseUrl = 'https://localhost:8080/api/v1/tipo_usuario';
+  private baseUrl = 'https://localhost:8080/api/v1/tipo_usuarios';
 
   constructor(private http:HttpClient) { }
   
-  getAllTipo_Usuario(): Observable<any> {
+  getAllTipo_Usuarios(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
   
@@ -18,12 +18,12 @@ export class Tipo_usuariosService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
   
-  createTipo_Usuario(tipo_Usuario: Object): Observable<Object> {
-    return this.http.post(this.baseUrl, tipo_Usuario);
+  createTipo_Usuario(tipo_usuario: Object): Observable<Object> {
+    return this.http.post(this.baseUrl, tipo_usuario);
   }
   
-  updateTipo_Usuario(id: number, tipo_Usuario: Object): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, tipo_Usuario);
+  updateTipo_Usuario(id: number, tipo_usuario: Object): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, tipo_usuario);
   }
   
   deleteTipo_Usuario(id: number): Observable<any> {
