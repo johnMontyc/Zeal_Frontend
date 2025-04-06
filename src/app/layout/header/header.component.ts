@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core'; // Importa Component para definir el componente
+import { Router, RouterModule } from '@angular/router'; // Importa Router para manejar la navegación
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule], 
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
   constructor(private router: Router) {}
-  navigateToHome() {
-    this.router.navigate(['/home']);
+
+  navigateToHome(): void {
+    this.router.navigate(['/']); // Redirige a la ruta Home
   }
 }

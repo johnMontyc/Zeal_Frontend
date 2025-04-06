@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 150px 20px 100px 20px;
+  background: linear-gradient(135deg, #d4f8e8, #b8e4c9); /* Fondo degradado verde más suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgba(200, 230, 210, 0.5); /* Borde verde claro con transparencia */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra más difuminada */
+  text-align: center;
+  backdrop-filter: blur(15px); /* Efecto de difuminado más pronunciado */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1b5e20; /* Verde más oscuro para contraste */
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid rgba(163, 217, 165, 0.6); /* Borde verde claro */
+  border-radius: 6px;
+  background-color: rgba(240, 255, 240, 0.9); /* Fondo blanco con un toque verde */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #66bb6a; /* Verde más vibrante */
+  box-shadow: 0 0 10px rgba(102, 187, 106, 0.6); /* Sombra verde más suave */
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #81c784; /* Verde claro */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+
+form button:hover {
+  background-color: #66bb6a; /* Verde más vibrante */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.link a {
+  color: #1b5e20; /* Verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
