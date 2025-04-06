@@ -144,11 +144,11 @@ nav a:hover::before {
   align-items: center;
 }
 
-/* 🔑 Botón Iniciar Sesión */
+/* 🔑 Botón Iniciar Sesión (violeta) */
 .login-btn {
-  background: rgba(255, 255, 255, 0.6);
-  color: #2f6e4e;
-  border: 2px solid #4caf50;
+  background: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+  color: #8e24aa; /* Violeta oscuro */
+  border: 2px solid #ab47bc; /* Borde violeta */
   padding: 10px 20px;
   border-radius: 14px;
   font-size: 1.05rem;
@@ -156,36 +156,36 @@ nav a:hover::before {
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.4s ease-in-out;
-  box-shadow: 0px 4px 12px rgba(76, 175, 80, 0.2);
+  box-shadow: 0px 4px 12px rgba(171, 71, 188, 0.3); /* Sombra violeta */
   backdrop-filter: blur(5px);
 }
 
 .login-btn:hover {
-  background: linear-gradient(135deg, #66bb6a, #a5d6a7);
+  background: linear-gradient(135deg, #ab47bc, #ce93d8); /* Degradado violeta */
   color: white;
-  transform: scale(1.06);
-  box-shadow: 0px 6px 18px rgba(76, 175, 80, 0.4);
+  transform: scale(1.06); /* Efecto de agrandamiento */
+  box-shadow: 0px 6px 18px rgba(171, 71, 188, 0.5); /* Sombra más intensa */
 }
 
-/* ✨ Botón Registrarse (marrón cálido) */
+/* ✨ Botón Registrarse (azul) */
 .register-btn {
-  background: rgba(255, 255, 255, 0.6);
-  color: #5d4037;
+  background: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+  color: #1565c0; /* Azul oscuro */
   padding: 10px 20px;
-  border: 2px solid #8d6e63;
+  border: 2px solid #1e88e5; /* Borde azul */
   border-radius: 14px;
   font-size: 1.05rem;
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.4s ease-in-out;
-  box-shadow: 0px 4px 12px rgba(141, 110, 99, 0.3);
+  box-shadow: 0px 4px 12px rgba(30, 136, 229, 0.3); /* Sombra azul */
   backdrop-filter: blur(5px);
 }
 
 .register-btn:hover {
-  background: linear-gradient(135deg, #8d6e63, #d7ccc8);
+  background: linear-gradient(135deg, #1e88e5, #64b5f6); /* Degradado azul */
   color: white;
-  transform: scale(1.06);
-  box-shadow: 0px 6px 18px rgba(141, 110, 99, 0.5);
+  transform: scale(1.06); /* Efecto de agrandamiento */
+  box-shadow: 0px 6px 18px rgba(30, 136, 229, 0.5); /* Sombra más intensa */
 }
