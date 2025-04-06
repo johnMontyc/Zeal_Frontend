@@ -25,11 +25,11 @@ export class TeamComponent {
       github: 'https://github.com/issa-cooper'
     },
     {
-      name: 'Carlos Ruiz',
+      name: 'Juan Diego Gil',
       position: 'UI/UX Designer',
       image: 'assets/team/.jpg',
-      linkedin: 'https://www.linkedin.com/in//',
-      github: 'https://github.com/'
+      linkedin: 'https://www.linkedin.com/in/juan-diego-gil-roldan-8b5883332/',
+      github: 'https://github.com/Juangil56'
     },
     {
       name: 'Luis Martinez',

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RolesService {
-  private baseUrl = 'https://localhost:8080/api/v1/roles';
+  private baseUrl = 'https://localhost:8080/api/v1/rol';
 
   constructor(private http:HttpClient) { }
   
@@ -18,15 +18,15 @@ export class RolesService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
   
-  createRole(role: Object): Observable<Object> {
-    return this.http.post(this.baseUrl, role);
+  createRoles(rol: Object): Observable<Object> {
+    return this.http.post(this.baseUrl, rol);
   }
   
-  updateRole(id: number, role: Object): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, role);
+  updateRoles(id: number, rol: Object): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, rol);
   }
   
-  deleteRole(id: number): Observable<any> {
+  deleteRoles(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
   
