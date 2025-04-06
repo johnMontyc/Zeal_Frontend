@@ -1,0 +1,98 @@
+/* 🌱 Footer con verdes y marrones difuminados y animación viva */
+footer {
+  background: linear-gradient(135deg, #5e8b7e, #a58c6f, #d1cfc7); /* verdes + marrones difuminados */
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* ✨ Luz animada suave y elegante */
+footer::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 20%, transparent 70%);
+  animation: sparkles 10s infinite linear;
+}
+
+/* 💫 Animación flotante */
+@keyframes sparkles {
+  0% { transform: rotate(0deg); opacity: 0.3; }
+  50% { transform: rotate(180deg); opacity: 0.6; }
+  100% { transform: rotate(360deg); opacity: 0.3; }
+}
+
+/* 📝 Texto suave con efecto brillante */
+footer p {
+  margin: 12px 0;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+  color: #f4f4f4;
+}
+
+footer p:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* 🌐 Redes sociales con un toque natural */
+.footer-socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* 🌿 Botones con colores tierra y brillo natural */
+.footer-socials a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8da68c, #c5a98b);
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  box-shadow: 0px 0px 12px rgba(120, 90, 60, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🍂 Animación suave y natural al hover */
+.footer-socials a:hover {
+  transform: scale(1.2) rotate(8deg);
+  box-shadow: 0px 0px 20px rgba(180, 160, 130, 0.8);
+  background: linear-gradient(135deg, #c5a98b, #8da68c);
+}
+
+/* 🌟 Luz sutil al pasar */
+.footer-socials a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.footer-socials a:hover::before {
+  opacity: 1;
+  transform: scale(1.4);
+}
