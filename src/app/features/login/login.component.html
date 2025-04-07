@@ -1,40 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sesión</title>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escalado para dispositivos móviles -->
+  <title>Iniciar Sesión</title> <!-- Título de la página -->
+
+  <!-- Enlace al archivo CSS del componente -->
   <link rel="stylesheet" href="login.component.css">
+
+  <!-- Fuente Quicksand desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Fondo oscuro semitransparente para el modal -->
     <div class="modal-backdrop">
+        <!-- Contenedor principal del modal -->
         <div class="login-modal">
           <!-- Botón para cerrar el modal -->
-          <button class="close-btn" (click)="closeModal()">×</button>
+          <button class="close-btn" (click)="closeModal()">×</button> <!-- Llama al método `closeModal` para cerrar el modal -->
           
+          <!-- Título del modal -->
           <h2>Iniciar Sesión</h2>
-          <form (submit)="onLogin($event)">
-            <input type="text" placeholder="Usuario o correo" required>
-            <input type="password" placeholder="Contraseña" required>
-            <button type="submit">Entrar</button>
+
+          <!-- Formulario de inicio de sesión -->
+          <form (submit)="onLogin($event)"> <!-- Llama al método `onLogin` al enviar el formulario -->
+            <input type="text" placeholder="Usuario o correo" required> <!-- Campo para ingresar el usuario o correo -->
+            <input type="password" placeholder="Contraseña" required> <!-- Campo para ingresar la contraseña -->
+            <button type="submit">Entrar</button> <!-- Botón para enviar el formulario -->
           </form>
+
+          <!-- Enlace para redirigir al registro -->
           <div class="link">
             <a (click)="showRegisterMessage()" class="link login-link" role="button" tabindex="0">
+              <!-- Llama al método `showRegisterMessage` al hacer clic -->
               ¿No tienes cuenta? <strong>Regístrate</strong>
             </a>
           </div>
+
           <!-- Mensaje de inicio de sesión -->
           <div *ngIf="loginMessage" class="login-message">
+            <!-- Muestra el mensaje de inicio de sesión si `loginMessage` tiene un valor -->
             <p>{{ loginMessage }}</p>
           </div>
         </div>
       </div>
       
+      <!-- Script adicional (no funcional en Angular, pero incluido en el archivo) -->
       <script>
         this.registerMessage = 'Usuario registrado exitosamente. Redirigiendo a la página de registro...';
       </script>
       
 </body>
 </html>
+
+<!--
+Este archivo HTML define la estructura del componente de inicio de sesión (`LoginComponent`). Su propósito es proporcionar una interfaz para que los usuarios ingresen sus credenciales y accedan a la plataforma.
+
+### Papel en el proyecto:
+1. **Autenticación de usuarios**:
+   - Permite a los usuarios ingresar su nombre de usuario o correo electrónico y contraseña para acceder a la plataforma.
+
+2. **Interactividad**:
+   - Incluye un enlace para redirigir al formulario de registro si el usuario no tiene una cuenta.
+   - Muestra mensajes dinámicos de inicio de sesión o errores mediante la directiva `*ngIf`.
+
+3. **Diseño centrado en el usuario**:
+   - Utiliza un modal con un fondo oscuro semitransparente para enfocar la atención del usuario en el formulario de inicio de sesión.
+
+4. **Accesibilidad**:
+   - Incluye atributos como `role="button"` y `tabindex="0"` para mejorar la navegación mediante teclado.
+
+En resumen, este archivo es esencial para manejar el flujo de autenticación en la aplicación, proporcionando una experiencia de usuario clara y funcional.
+-->

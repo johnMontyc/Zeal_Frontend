@@ -1,31 +1,61 @@
+<!--
+Este archivo HTML define la estructura del componente `ProfileWorkerComponent`, que tiene como objetivo mostrar el perfil detallado de un trabajador, incluyendo su información personal, funciones y datos de contacto.
+
+### Papel en el proyecto:
+1. **Presentación del perfil del trabajador**:
+   - Muestra información clave como el nombre, rol, ubicación, funciones, teléfono y correo electrónico del trabajador.
+
+2. **Interactividad**:
+   - Incluye un botón para enviar mensajes al trabajador, lo que permite una interacción directa con el usuario.
+
+3. **Dinamismo**:
+   - Utiliza datos dinámicos provenientes de la propiedad `workerData` para renderizar el contenido, asegurando que el perfil sea específico para cada trabajador.
+
+4. **Accesibilidad**:
+   - Incluye atributos como `alt` en las imágenes para mejorar la accesibilidad y proporcionar descripciones en caso de que las imágenes no se carguen.
+
+En resumen, este archivo es esencial para proporcionar una vista detallada y funcional del perfil de los trabajadores, mejorando la experiencia del usuario al explorar la información de los profesionales disponibles en la plataforma.
+-->
+
+<!-- Sección principal del perfil del trabajador -->
 <section class="profile-worker" *ngIf="workerData">
-  <!-- Foto de perfil -->
+  <!-- Verifica si existe información del trabajador (workerData) antes de renderizar -->
+
+  <!-- Encabezado del perfil -->
   <div class="profile-header">
+    <!-- Foto de perfil -->
     <img [src]="workerData.image" [alt]="workerData.name" class="profile-picture">
+    <!-- La imagen se obtiene dinámicamente desde la propiedad `workerData.image` -->
+    <!-- El atributo `alt` muestra el nombre del trabajador en caso de que la imagen no cargue -->
+
+    <!-- Información básica del trabajador -->
     <div class="profile-info">
-      <h2>{{ workerData.name }}</h2>
-      <p class="role">{{ workerData.role }}</p>
-      <p class="location">{{ workerData.location }}</p>
+      <h2>{{ workerData.name }}</h2> <!-- Nombre del trabajador -->
+      <p class="role">{{ workerData.role }}</p> <!-- Rol del trabajador -->
+      <p class="location">{{ workerData.location }}</p> <!-- Ubicación del trabajador -->
     </div>
   </div>
 
-  <!-- Funciones del trabajador -->
+  <!-- Sección de funciones del trabajador -->
   <div class="profile-functions">
-    <h3>Funciones</h3>
+    <h3>Funciones</h3> <!-- Título de la sección -->
     <ul>
-    <li *ngFor="let func of workerData.functions">{{ func }}</li>
+      <!-- Lista de funciones del trabajador -->
+      <li *ngFor="let func of workerData.functions">{{ func }}</li>
+      <!-- Recorre dinámicamente el array `workerData.functions` y muestra cada función -->
     </ul>
   </div>
 
-  <!-- Información adicional -->
+  <!-- Información adicional del trabajador -->
   <div class="profile-details">
-    <h3>Información de contacto</h3>
-    <p><strong>Teléfono:</strong> {{ workerData.phone }}</p>
-    <p><strong>Email:</strong> {{ workerData.email }}</p>
+    <h3>Información de contacto</h3> <!-- Título de la sección -->
+    <p><strong>Teléfono:</strong> {{ workerData.phone }}</p> <!-- Teléfono del trabajador -->
+    <p><strong>Email:</strong> {{ workerData.email }}</p> <!-- Email del trabajador -->
   </div>
 
-  <!-- Botón de mensaje -->
+  <!-- Botón para enviar un mensaje al trabajador -->
   <div class="profile-actions">
     <button class="message-btn">Enviar Mensaje</button>
+    <!-- Botón estilizado con la clase `message-btn` -->
   </div>
 </section>

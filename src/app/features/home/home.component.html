@@ -4,68 +4,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="home.component.css">
-  <link rel="icon" type="image/svg+xml" href="assets/team/google-icon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.component.css"> <!-- Archivo CSS para los estilos del componente Home -->
+  <link rel="icon" type="image/svg+xml" href="assets/team/google-icon.svg"> <!-- Ícono de la pestaña del navegador -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> <!-- Fuente Poppins desde Google Fonts -->
 
-  <title>Perfiles de Servicio</title>
+  <title>Perfiles de Servicio</title> <!-- Título de la página -->
 </head>
 <body>
     <div class="profiles-container">
+        <!-- Tarjeta de perfil de Claudia -->
         <div class="profile-card" id="claudia">
-            <img src="assets/customers/claudia.jpg" alt="Claudia" class="profile-img">
-            <h2 class="profile-name">Claudia</h2>
-            <p class="profile-service">Especialista en instalación de paneles solares.</p>
-            <button class="contact-btn" (click)="goToProfile('claudia')">📞 Contactar</button>
+            <img src="assets/customers/claudia.jpg" alt="Claudia" class="profile-img"> <!-- Imagen de perfil -->
+            <h2 class="profile-name">Claudia</h2> <!-- Nombre del perfil -->
+            <p class="profile-service">Especialista en instalación de paneles solares.</p> <!-- Descripción del servicio -->
+            <button class="contact-btn" (click)="goToProfile('claudia')">📞 Contactar</button> <!-- Botón para contactar -->
         </div>
+
+        <!-- Tarjeta de perfil de Margaret -->
         <div class="profile-card" id="margaret">
             <img src="assets/customers/margaret.jpg" alt="Margaret" class="profile-img">
             <h2 class="profile-name">Margaret</h2>
             <p class="profile-service">Ingeniera en sistemas de energía renovable.</p>
             <button class="contact-btn" (click)="goToProfile('margaret')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Carla -->
         <div class="profile-card" id="carla">
             <img src="assets/customers/carla.jpg" alt="Carla" class="profile-img">
             <h2 class="profile-name">Carla</h2>
             <p class="profile-service">Técnica en mantenimiento eléctrico.</p>
             <button class="contact-btn" (click)="goToProfile('carla')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Sofía -->
         <div class="profile-card" id="sofia">
             <img src="assets/customers/sofia.jpg" alt="Sofía" class="profile-img">
             <h2 class="profile-name">Sofía</h2>
             <p class="profile-service">Asesora en proyectos de energía sostenible.</p>
             <button class="contact-btn" (click)="goToProfile('sofia')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Manuel -->
         <div class="profile-card" id="manuel">
             <img src="assets/customers/manuel.jpg" alt="Manuel" class="profile-img">
             <h2 class="profile-name">Manuel</h2>
             <p class="profile-service">Instalador de paneles solares industriales.</p>
             <button class="contact-btn" (click)="goToProfile('manuel')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Julia -->
         <div class="profile-card" id="julia">
             <img src="assets/customers/julia.jpg" alt="Julia" class="profile-img">
             <h2 class="profile-name">Julia</h2>
             <p class="profile-service">Consultora en eficiencia energética.</p>
             <button class="contact-btn" (click)="goToProfile('julia')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Fernando -->
         <div class="profile-card" id="fernando">
             <img src="assets/customers/fernando.jpg" alt="Fernando" class="profile-img">
             <h2 class="profile-name">Fernando</h2>
             <p class="profile-service">Experto en instalación de baterías solares.</p>
             <button class="contact-btn" (click)="goToProfile('fernando')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Carlos -->
         <div class="profile-card" id="carlos">
             <img src="assets/customers/carlos.jpg" alt="Carlos" class="profile-img">
             <h2 class="profile-name">Carlos</h2>
             <p class="profile-service">Ingeniero en energías renovables.</p>
             <button class="contact-btn" (click)="goToProfile('carlos')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Carmen -->
         <div class="profile-card" id="carmen">
             <img src="assets/customers/carmen.jpg" alt="Carmen" class="profile-img">
             <h2 class="profile-name">Carmen</h2>
             <p class="profile-service">Especialista en climatización solar.</p>
             <button class="contact-btn" (click)="goToProfile('carmen')">📞 Contactar</button>
         </div>
+
+        <!-- Tarjeta de perfil de Zun -->
         <div class="profile-card" id="zun">
             <img src="assets/customers/zun.jpg" alt="Zun" class="profile-img">
             <h2 class="profile-name">Zun</h2>
@@ -73,6 +92,7 @@
             <button class="contact-btn" (click)="goToProfile('zun')">📞 Contactar</button>
         </div>
 
+        <!-- Slider de fondo con imágenes -->
         <div class="background-slider">
             <div class="slide" style="background-image: url('assets/fondos/fondo1.jpg');"></div>
             <div class="slide" style="background-image: url('assets/fondos/fondo2.jpg');"></div>
@@ -90,3 +110,22 @@
     </div>
 </body>
 </html>
+
+<!--
+Este archivo HTML define la estructura de la página principal (Home) de la aplicación. Su propósito es mostrar un listado de perfiles de servicio, cada uno con información relevante como nombre, especialidad y una opción para contactar.
+
+### Papel en el proyecto:
+1. **Presentación de perfiles**:
+   - Muestra una lista de profesionales con sus respectivas especialidades, permitiendo a los usuarios explorar las opciones disponibles.
+
+2. **Interactividad**:
+   - Cada tarjeta incluye un botón que permite redirigir al perfil detallado del profesional seleccionado mediante el método `goToProfile`.
+
+3. **Diseño visual**:
+   - Utiliza un contenedor principal (`profiles-container`) para organizar las tarjetas de perfil y un slider de fondo para mejorar la estética de la página.
+
+4. **Accesibilidad**:
+   - Cada tarjeta incluye una imagen con un atributo `alt` para mejorar la accesibilidad y proporcionar descripciones en caso de que las imágenes no se carguen.
+
+En resumen, este archivo es clave para la funcionalidad principal de la aplicación, ya que actúa como un punto de entrada para que los usuarios exploren y seleccionen los servicios ofrecidos.
+-->

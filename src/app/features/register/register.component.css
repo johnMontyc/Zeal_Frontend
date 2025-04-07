@@ -1,96 +1,126 @@
+/*
+Este archivo CSS define los estilos para el componente `RegisterComponent`, que maneja la interfaz del formulario de registro de usuarios.
+
+### Papel en el proyecto:
+1. **Diseño visual**:
+   - Proporciona un diseño limpio y moderno para el formulario de registro, utilizando colores suaves, bordes redondeados y sombras para mejorar la experiencia visual.
+
+2. **Interactividad**:
+   - Incluye efectos de hover y focus en los campos de entrada y botones, haciendo que la interfaz sea más dinámica e intuitiva para el usuario.
+
+3. **Accesibilidad**:
+   - Asegura que los elementos del formulario sean fáciles de usar y navegar, con un diseño centrado y responsivo.
+
+4. **Consistencia**:
+   - Mantiene una coherencia visual con el resto de la aplicación, utilizando la misma paleta de colores y tipografía.
+
+En resumen, este archivo CSS es esencial para garantizar que el formulario de registro sea atractivo, funcional y fácil de usar, mejorando la experiencia del usuario al registrarse en la plataforma.
+*/
+
+/* Estilos globales */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina padding predeterminado */
+  font-family: 'Quicksand', sans-serif; /* Fuente principal */
 }
 
+/* Estilo general del cuerpo */
 body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 150px 20px 100px 20px;
-  background: linear-gradient(135deg, #d4f8e8, #b8e4c9); /* Fondo degradado verde más suave */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif; /* Fuente principal */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 150px 20px 100px 20px; /* Espaciado interno */
+  background: linear-gradient(135deg, #d4f8e8, #b8e4c9); /* Fondo degradado verde suave */
+  display: flex; /* Usar flexbox para centrar contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  min-height: 100vh; /* Altura mínima de la ventana */
 }
 
+/* Contenedor principal del formulario de registro */
 .register-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
+  max-width: 400px; /* Ancho máximo del contenedor */
+  margin: 50px auto; /* Centrar horizontalmente y agregar margen superior/inferior */
+  padding: 20px; /* Espaciado interno */
   border: 1px solid rgba(200, 230, 210, 0.5); /* Borde verde claro con transparencia */
-  border-radius: 12px;
+  border-radius: 12px; /* Bordes redondeados */
   background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra más difuminada */
-  text-align: center;
-  backdrop-filter: blur(15px); /* Efecto de difuminado más pronunciado */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra difuminada */
+  text-align: center; /* Centrar texto */
+  backdrop-filter: blur(15px); /* Efecto de difuminado */
 }
 
+/* Título del formulario */
 h2 {
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #1b5e20; /* Verde más oscuro para contraste */
+  margin-bottom: 20px; /* Espaciado inferior */
+    font-weight: 600; /* Peso de la fuente */
+  color: #1b5e20; /* Verde oscuro */
 }
 
+/* Campos de entrada del formulario */
 form input {
-  width: 100%;
-  padding: 12px;
-  margin: 12px 0;
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  margin: 12px 0; /* Espaciado superior e inferior */
   border: 1px solid rgba(163, 217, 165, 0.6); /* Borde verde claro */
-  border-radius: 6px;
+  border-radius: 6px; /* Bordes redondeados */
   background-color: rgba(240, 255, 240, 0.9); /* Fondo blanco con un toque verde */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
+/* Efecto al enfocar un campo de entrada */
 form input:focus {
-  outline: none;
+  outline: none; /* Elimina el borde predeterminado */
   border-color: #66bb6a; /* Verde más vibrante */
-  box-shadow: 0 0 10px rgba(102, 187, 106, 0.6); /* Sombra verde más suave */
+  box-shadow: 0 0 10px rgba(102, 187, 106, 0.6); /* Sombra verde */
 }
 
+/* Botón del formulario */
 form button {
-  width: 100%;
-  padding: 12px;
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
   background-color: #81c784; /* Verde claro */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a mano */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 form button:hover {
   background-color: #66bb6a; /* Verde más vibrante */
   transform: scale(1.05); /* Efecto de agrandamiento */
 }
 
+/* Enlace para redirigir al inicio de sesión */
 .link {
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: #555;
+  margin-top: 15px; /* Espaciado superior */
+  font-size: 0.9rem; /* Tamaño de fuente */
+  color: #555; /* Color gris */
 }
 
+/* Estilo del enlace */
 .link a {
   color: #1b5e20; /* Verde oscuro */
-  text-decoration: none;
-  font-weight: 600;
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 600; /* Texto en negrita */
 }
 
+/* Efecto al pasar el cursor sobre el enlace */
 .link a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
+/* Mensaje de inicio de sesión exitoso */
 .login-message {
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 10px; /* Espaciado superior */
+  padding: 10px; /* Espaciado interno */
   background-color: #e8f5e9; /* Verde claro */
   color: #388e3c; /* Verde oscuro */
-  border: 1px solid #388e3c;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  text-align: center;
+  border: 1px solid #388e3c; /* Borde verde oscuro */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 0.9rem; /* Tamaño de fuente */
+  text-align: center; /* Centrar texto */
 }

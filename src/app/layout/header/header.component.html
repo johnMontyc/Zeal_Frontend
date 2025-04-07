@@ -1,15 +1,35 @@
 <header>
-  <h1 class="home-button" (click)="navigateToHome()">
-    <img src="assets/logo/logo-Zeal.jpg" alt="Zeal Logo" class="logo-img">
+  <!-- Botón de inicio que redirige a la página principal -->
+  <h1 class="home-button" (click)="navigateToHome()"> <!-- Llama al método `navigateToHome` al hacer clic -->
+    <img src="assets/logo/logo-Zeal.jpg" alt="Zeal Logo" class="logo-img"> <!-- Logo de la aplicación con descripción alternativa -->
   </h1>
 
+  <!-- Barra de navegación -->
   <nav>
-    <a routerLink="/team" routerLinkActive="active">Nosotros</a>
-    <a routerLink="/our-services" routerLinkActive="active">Servicios</a>
+    <a routerLink="/team" routerLinkActive="active">Nosotros</a> <!-- Enlace a la página del equipo, se activa cuando está en la ruta -->
+    <a routerLink="/our-services" routerLinkActive="active">Servicios</a> <!-- Enlace a la página de servicios -->
   </nav>
 
+  <!-- Sección de autenticación -->
   <div class="login-section">
-    <a routerLink="/login" class="login-btn" routerLinkActive="active">Iniciar Sesión</a>
-    <a routerLink="/register" class="register-btn" routerLinkActive="active">Registrarse</a>
+    <a routerLink="/login" class="login-btn" routerLinkActive="active">Iniciar Sesión</a> <!-- Botón para redirigir al inicio de sesión -->
+    <a routerLink="/register" class="register-btn" routerLinkActive="active">Registrarse</a> <!-- Botón para redirigir al registro -->
   </div>
 </header>
+
+<!--
+### Papel en el proyecto:
+1. **Navegación principal**:
+   - Proporciona enlaces a las páginas principales de la aplicación, como "Nosotros", "Servicios", "Iniciar Sesión" y "Registrarse".
+
+2. **Identidad visual**:
+   - Incluye el logo de la aplicación para reforzar la marca y proporcionar un acceso rápido a la página principal.
+
+3. **Interactividad**:
+   - Utiliza `routerLink` para manejar la navegación entre rutas de Angular y `routerLinkActive` para resaltar el enlace activo.
+
+4. **Diseño responsivo**:
+   - Organiza los elementos de navegación y autenticación de manera clara y accesible.
+
+En resumen, este archivo HTML define la estructura del encabezado de la aplicación, proporcionando navegación intuitiva y acceso rápido a las secciones clave de la plataforma.
+-->

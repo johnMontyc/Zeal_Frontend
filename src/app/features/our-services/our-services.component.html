@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Servicios de Energías Renovables</title>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <title>Servicios de Energías Renovables</title> <!-- Título de la página -->
+
+  <!-- Fuente Quicksand desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Archivo CSS asociado al componente -->
   <link rel="stylesheet" href="our-services.component.css">
 </head>
 
 <body>
+  <!--
+  Este archivo HTML define la estructura del componente `OurServicesComponent`, que tiene como objetivo mostrar los servicios ofrecidos por la plataforma de manera visualmente atractiva y organizada.
 
+  ### Papel en el proyecto:
+  1. **Presentación de servicios**:
+     - Muestra los servicios principales de la plataforma, como Energía Solar, Eólica, Hidroenergía y Bioenergía, utilizando tarjetas con imágenes, títulos y descripciones.
+
+  2. **Interactividad**:
+     - Utiliza un carrusel para organizar las tarjetas de servicios, permitiendo a los usuarios explorar los servicios de manera dinámica.
+
+  3. **Diseño visual**:
+     - Incluye imágenes relevantes y un diseño limpio para captar la atención del usuario y transmitir profesionalismo.
+
+  4. **Accesibilidad**:
+     - Cada tarjeta incluye un atributo `alt` en las imágenes para mejorar la accesibilidad y proporcionar descripciones en caso de que las imágenes no se carguen.
+
+  En resumen, este archivo es esencial para destacar los servicios de la plataforma, proporcionando una experiencia visual atractiva y funcional que permite a los usuarios explorar las opciones disponibles.
+  -->
+
+  <!-- Sección principal de servicios -->
   <section class="services-section">
+    <!-- Título de la sección -->
     <h2>🌿 Nuestros Servicios</h2>
 
+    <!-- Contenedor del carrusel -->
     <div class="carousel-container">
+      <!-- Pista del carrusel que contiene las tarjetas -->
       <div class="carousel-track">
         <!-- Servicio 1 -->
         <div class="card">
-          <img src="https://descubrelaenergia.fundaciondescubre.es/files/2021/10/energia-solar.jpg" alt="Energía Solar">
-          <h3>Energía Solar</h3>
-          <p>Instalación de paneles solares para hogares y empresas.</p>
+          <img src="https://descubrelaenergia.fundaciondescubre.es/files/2021/10/energia-solar.jpg" alt="Energía Solar"> <!-- Imagen del servicio -->
+          <h3>Energía Solar</h3> <!-- Título del servicio -->
+          <p>Instalación de paneles solares para hogares y empresas.</p> <!-- Descripción del servicio -->
         </div>
+
         <!-- Servicio 2 -->
         <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/GreenMountainWindFarm_Fluvanna_2004.jpg/350px-GreenMountainWindFarm_Fluvanna_2004.jpg" alt="Energía Eólica">
-          <h3>Energía Eólica</h3>
-          <p>Soluciones de aerogeneradores para zonas rurales y urbanas.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/GreenMountainWindFarm_Fluvanna_2004.jpg/350px-GreenMountainWindFarm_Fluvanna_2004.jpg" alt="Energía Eólica"> <!-- Imagen del servicio -->
+          <h3>Energía Eólica</h3> <!-- Título del servicio -->
+          <p>Soluciones de aerogeneradores para zonas rurales y urbanas.</p> <!-- Descripción del servicio -->
         </div>
+
         <!-- Servicio 3 -->
         <div class="card">
-          <img src="https://www.fundacionaquae.org/wp-content/uploads/2014/08/Energ%C3%ADa-hidr%C3%A1ulica.jpg" alt="Hidroenergía">
-          <h3>Hidroenergía</h3>
-          <p>Proyectos de energía hidráulica a pequeña escala.</p>
+          <img src="https://www.fundacionaquae.org/wp-content/uploads/2014/08/Energ%C3%ADa-hidr%C3%A1ulica.jpg" alt="Hidroenergía"> <!-- Imagen del servicio -->
+          <h3>Hidroenergía</h3> <!-- Título del servicio -->
+          <p>Proyectos de energía hidráulica a pequeña escala.</p> <!-- Descripción del servicio -->
         </div>
+
         <!-- Servicio 4 -->
         <div class="card">
-          <img src="https://www.repsol.com/content/dam/repsol-corporate/es/productos-y-servicios/azufre-agricola.jpg" alt="Bioenergía">
-          <h3>Bioenergía</h3>
-          <p>Aprovechamiento de residuos orgánicos para generación de energía.</p>
+          <img src="https://www.repsol.com/content/dam/repsol-corporate/es/productos-y-servicios/azufre-agricola.jpg" alt="Bioenergía"> <!-- Imagen del servicio -->
+          <h3>Bioenergía</h3> <!-- Título del servicio -->
+          <p>Aprovechamiento de residuos orgánicos para generación de energía.</p> <!-- Descripción del servicio -->
         </div>
       </div>
     </div>
   </section>
-
 </body>
 </html>

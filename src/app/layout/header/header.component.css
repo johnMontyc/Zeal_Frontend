@@ -149,21 +149,21 @@ nav a:hover::before {
   background: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
   color: #8e24aa; /* Violeta oscuro */
   border: 2px solid #ab47bc; /* Borde violeta */
-  padding: 10px 20px;
-  border-radius: 14px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 14px; /* Bordes redondeados */
+  font-size: 1.05rem; /* Tamaño de fuente */
+  font-weight: 600; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  text-decoration: none; /* Sin subrayado */
+  transition: all 0.4s ease-in-out; /* Transición suave para hover */
   box-shadow: 0px 4px 12px rgba(171, 71, 188, 0.3); /* Sombra violeta */
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
 }
 
 .login-btn:hover {
   background: linear-gradient(135deg, #ab47bc, #ce93d8); /* Degradado violeta */
-  color: white;
-  transform: scale(1.06); /* Efecto de agrandamiento */
+  color: white; /* Cambia el texto a blanco */
+  transform: scale(1.06); /* Agranda ligeramente el botón */
   box-shadow: 0px 6px 18px rgba(171, 71, 188, 0.5); /* Sombra más intensa */
 }
 
@@ -171,21 +171,21 @@ nav a:hover::before {
 .register-btn {
   background: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
   color: #1565c0; /* Azul oscuro */
-  padding: 10px 20px;
+  padding: 10px 20px; /* Espaciado interno */
   border: 2px solid #1e88e5; /* Borde azul */
-  border-radius: 14px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
+  border-radius: 14px; /* Bordes redondeados */
+  font-size: 1.05rem; /* Tamaño de fuente */
+  font-weight: 600; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  text-decoration: none; /* Sin subrayado */
+  transition: all 0.4s ease-in-out; /* Transición suave para hover */
   box-shadow: 0px 4px 12px rgba(30, 136, 229, 0.3); /* Sombra azul */
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
 }
 
 .register-btn:hover {
   background: linear-gradient(135deg, #1e88e5, #64b5f6); /* Degradado azul */
-  color: white;
-  transform: scale(1.06); /* Efecto de agrandamiento */
+  color: white; /* Cambia el texto a blanco */
+  transform: scale(1.06); /* Agranda ligeramente el botón */
   box-shadow: 0px 6px 18px rgba(30, 136, 229, 0.5); /* Sombra más intensa */
 }
