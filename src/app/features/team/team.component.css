@@ -1,15 +1,15 @@
 /* ✨ Fuente femenina y suave */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap'); /* Importa la fuente Quicksand para un diseño moderno y limpio */
 
 /* 🔹 Sección del equipo */
 .team-section {
-  font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(135deg, rgba(250, 225, 226, 0.9), rgba(210, 230, 250, 0.9));
-  padding: 180px 20px 60px 20px; /* MÁS ABAJO */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
+  font-family: 'Quicksand', sans-serif; /* Aplica la fuente Quicksand */
+  background: linear-gradient(135deg, rgba(250, 225, 226, 0.9), rgba(210, 230, 250, 0.9)); /* Fondo degradado suave */
+  padding: 180px 20px 60px 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  position: relative; /* Posición relativa para manejar elementos internos */
+  overflow: hidden; /* Oculta contenido que se desborde */
+  border-radius: 20px; /* Bordes redondeados */
 }
 
 /* 🌊 Fondo animado sutil */
@@ -20,71 +20,68 @@
 }
 
 .team-section::before {
-  content: "";
-  position: absolute;
+  content: ""; /* Elemento decorativo vacío */
+  position: absolute; /* Posición absoluta dentro de la sección */
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(90deg, #fce4ec, #e0f7fa, #f3e5f5);
-  background-size: 200% 200%;
-  animation: fondo-movimiento 10s ease-in-out infinite;
-  opacity: 0.6;
-  z-index: -1;
+  background: linear-gradient(90deg, #fce4ec, #e0f7fa, #f3e5f5); /* Fondo degradado animado */
+  background-size: 200% 200%; /* Tamaño del fondo para la animación */
+  animation: fondo-movimiento 10s ease-in-out infinite; /* Animación de movimiento infinito */
+  opacity: 0.6; /* Transparencia */
+  z-index: -1; /* Envía el fondo detrás del contenido */
 }
 
 /* 🎀 Título encantador */
 .team-section h2 {
-  font-size: 2.8rem;
-  color: #5a5a5a;
-  margin-bottom: 40px;
-  font-weight: 600;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
+  font-size: 2.8rem; /* Tamaño de fuente */
+  color: #5a5a5a; /* Color gris oscuro */
+  margin-bottom: 40px; /* Espaciado inferior */
+  font-weight: 600; /* Peso de la fuente */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08); /* Sombra ligera en el texto */
 }
 
 /* 🧩 Distribución de tarjetas */
 .team-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: flex; /* Usar flexbox para organizar las tarjetas */
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en varias filas */
+  gap: 30px; /* Espaciado entre las tarjetas */
 }
 
 /* 💌 Tarjetas delicadas */
 .team-member-card {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 18px;
-  width: 270px;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(180, 180, 180, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
+  border-radius: 18px; /* Bordes redondeados */
+  width: 270px; /* Ancho fijo de las tarjetas */
+  padding: 25px; /* Espaciado interno */
+  box-shadow: 0 5px 15px rgba(180, 180, 180, 0.25); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+  backdrop-filter: blur(6px); /* Efecto de desenfoque */
 }
 
 .team-member-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 22px rgba(150, 150, 150, 0.25);
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 8px 22px rgba(150, 150, 150, 0.25); /* Sombra más pronunciada */
 }
 
 /* 📸 Imagen con glow pastel */
 .member-image {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 14px;
-  margin-bottom: 15px;
-  position: relative;
-  transition: transform 0.3s ease;
-  
+  width: 100%; /* Ancho completo */
+  height: 250px; /* Altura fija */
+  overflow: hidden; /* Oculta contenido que se desborde */
+  border-radius: 14px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espaciado inferior */
+  position: relative; /* Posición relativa para manejar elementos internos */
+  transition: transform 0.3s ease; /* Transición suave */
 }
-
-
 
 /* 🧍 Foto del miembro */
 .member-image img {
-  width: 70%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.3s ease;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  border-radius: 14px; /* Bordes redondeados */
+  transition: transform 0.3s ease; /* Transición suave */
 }
 
 /* 🧍‍♂️ Zoom especial para John */
@@ -94,48 +91,53 @@
 
 /* 🧾 Nombre y cargo */
 .team-member-card h3 {
-  font-size: 1.3rem;
-  color: #5b5b5b;
-  margin: 10px 0 5px;
-  font-weight: 500;
+  font-size: 1.3rem; /* Tamaño de fuente */
+  color: #5b5b5b; /* Color gris oscuro */
+  margin: 10px 0 5px; /* Espaciado superior e inferior */
+  font-weight: 500; /* Peso de la fuente */
 }
 
 .team-member-card .position {
-  font-size: 1.1rem;
-  color: #777;
-  margin-bottom: 15px;
-  font-style: italic;
+  font-size: 1.1rem; /* Tamaño de fuente */
+  color: #777; /* Color gris claro */
+  margin-bottom: 15px; /* Espaciado inferior */
+  font-style: italic; /* Texto en cursiva */
 }
 
 /* 🎨 Línea decorativa */
 .member-divider {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #eac0a2, #a3d5f7);
-  margin: 10px auto 15px;
-  border-radius: 3px;
+  width: 60px; /* Ancho de la línea */
+  height: 4px; /* Altura de la línea */
+  background: linear-gradient(90deg, #eac0a2, #a3d5f7); /* Fondo degradado */
+  margin: 10px auto 15px; /* Espaciado superior e inferior */
+  border-radius: 3px; /* Bordes redondeados */
 }
 
 /* 🔗 Redes sociales elegantes */
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 12px;
+  display: flex; /* Usar flexbox para organizar los iconos */
+  justify-content: center; /* Centrar los iconos horizontalmente */
+  gap: 14px; /* Espaciado entre los iconos */
+  margin-top: 12px; /* Espaciado superior */
 }
 
 /* 🌟 Iconos 3D suaves */
 .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 1.6rem;
-  transition: all 0.3s ease;
-  box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.8),
-              inset 3px 3px 5px rgba(140, 140, 140, 0.2);
+  display: flex; /* Usar flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  width: 48px; /* Ancho del icono */
+  height: 48px; /* Altura del icono */
+  border-radius: 50%; /* Forma circular */
+  font-size: 1.6rem; /* Tamaño de fuente */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.8), /* Sombra interna */
+              inset 3px 3px 5px rgba(140, 140, 140, 0.2); /* Sombra interna */
+}
+
+.social-link:hover {
+  transform: scale(1.2); /* Agrandamiento al pasar el cursor */
+  box-shadow: 0 0 15px rgba(163, 213, 247, 0.5); /* Sombra externa */
 }
 
 /* 🎭 Estilo café suave */
@@ -153,12 +155,6 @@
               inset 3px 3px 8px rgba(79, 59, 42, 0.3);
 }
 
-/* 💫 Hover bonito */
-.social-link:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px rgba(163, 213, 247, 0.5);
-}
-
 .social-link.linkedin:hover {
   background: linear-gradient(145deg, #bfa28f, #a27f6d);
   color: #fff;
@@ -168,3 +164,22 @@
   background: linear-gradient(145deg, #b2967c, #846b58);
   color: #fff;
 }
+
+/*
+Este archivo CSS define los estilos para la sección del equipo en la aplicación. Su propósito es presentar a los miembros del equipo de manera visualmente atractiva, utilizando tarjetas estilizadas con efectos modernos como sombras, transiciones y animaciones.
+
+### Papel en el proyecto:
+1. **Diseño visual**:
+   - Proporciona un diseño limpio y profesional para la sección del equipo, mejorando la experiencia del usuario.
+
+2. **Interactividad**:
+   - Incluye efectos de hover y animaciones para hacer que la interfaz sea más dinámica e interactiva.
+
+3. **Consistencia**:
+   - Usa una paleta de colores suave y una tipografía moderna para mantener la coherencia visual con el resto de la aplicación.
+
+4. **Accesibilidad**:
+   - Los iconos de redes sociales y las tarjetas están diseñados para ser fácilmente identificables y accesibles.
+
+En resumen, este archivo CSS es clave para crear una sección del equipo atractiva y funcional, que refuerce la identidad visual del proyecto.
+*/

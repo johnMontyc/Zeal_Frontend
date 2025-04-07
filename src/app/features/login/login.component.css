@@ -1,95 +1,122 @@
+/*
+Este archivo CSS define los estilos para el componente de inicio de sesión (`LoginComponent`). Su propósito es proporcionar un diseño atractivo y funcional para la interfaz de inicio de sesión, incluyendo el modal, los campos de entrada, los botones y los mensajes de retroalimentación.
+
+### Papel en el proyecto:
+1. **Diseño visual**:
+   - Proporciona un diseño limpio y moderno con colores suaves y transiciones suaves para mejorar la experiencia del usuario.
+
+2. **Interactividad**:
+   - Incluye efectos de hover y animaciones para los botones y el modal, haciendo que la interfaz sea más dinámica e intuitiva.
+
+3. **Mensajes de retroalimentación**:
+   - Estiliza los mensajes de éxito o error, como el mensaje de registro exitoso (`register-message`) o el mensaje de inicio de sesión (`login-message`), para que sean claros y visibles.
+
+4. **Accesibilidad**:
+   - Usa colores contrastantes y bordes redondeados para mejorar la legibilidad y la interacción del usuario.
+
+5. **Modal de inicio de sesión**:
+   - Diseña un modal centrado con un fondo difuminado para enfocar la atención del usuario en el formulario de inicio de sesión.
+
+En resumen, este archivo CSS es esencial para garantizar que el componente de inicio de sesión sea visualmente atractivo, fácil de usar y consistente con el diseño general de la aplicación.
+*/
+
+/* Estilo global para todos los elementos */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 10px;
-  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 10px; /* Espaciado interno predeterminado */
+  font-family: 'Quicksand', sans-serif; /* Fuente principal */
 }
 
+/* Estilo general del cuerpo */
 body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 20px;
+  font-family: 'Quicksand', sans-serif; /* Fuente principal */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 20px; /* Espaciado interno */
   background: linear-gradient(135deg, #d4f8e8, #b8e4c9); /* Fondo degradado verde claro */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  display: flex; /* Usar flexbox para centrar contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  min-height: 100vh; /* Altura mínima de la ventana */
 }
 
-/* Fondo difuminado oscuro */
+/* Fondo difuminado oscuro para el modal */
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed; /* Fija el fondo en la pantalla */
+  top: 0; /* Posición superior */
+  left: 0; /* Posición izquierda */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
   background: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-  font-family: 'Quicksand', sans-serif;
+  display: flex; /* Usar flexbox para centrar contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 /* Ventana modal */
 .login-modal {
-  position: relative;
-  max-width: 400px;
-  padding: 20px;
+  position: relative; /* Posición relativa para manejar elementos internos */
+  max-width: 400px; /* Ancho máximo */
+  padding: 20px; /* Espaciado interno */
   border: 1px solid rgba(163, 217, 165, 0.5); /* Borde verde claro */
-  border-radius: 12px;
+  border-radius: 12px; /* Bordes redondeados */
   background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra difuminada */
-  text-align: center;
-  backdrop-filter: blur(10px); /* Efecto de difuminado */
-  animation: fadeIn 0.5s ease-in-out;
-  text-align: center;
+  text-align: center; /* Centrar texto */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
 }
 
+/* Título del modal */
 .login-modal h2 {
-  margin-bottom: 20px;
-  font-weight: 600;
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-weight: 600; /* Peso de la fuente */
   color: #1b5e20; /* Verde oscuro */
 }
 
 /* Estilos del formulario */
 .login-modal form {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Usar flexbox para organizar los campos */
+  flex-direction: column; /* Colocar los campos en una columna */
 }
 
+/* Estilo de los campos de entrada */
 form input {
-  width: 100%;
-  padding: 12px;
-  margin: 12px 0;
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  margin: 12px 0; /* Espaciado superior e inferior */
   border: 1px solid rgba(163, 217, 165, 0.6); /* Borde verde claro */
-  border-radius: 6px;
+  border-radius: 6px; /* Bordes redondeados */
   background-color: rgba(240, 255, 240, 0.9); /* Fondo blanco con un toque verde */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
+/* Efecto al enfocar un campo de entrada */
 form input:focus {
-  outline: none;
+  outline: none; /* Elimina el borde predeterminado */
   border-color: #66bb6a; /* Verde más vibrante */
-  box-shadow: 0 0 10px rgba(102, 187, 106, 0.6); /* Sombra verde más suave */
+  box-shadow: 0 0 10px rgba(102, 187, 106, 0.6); /* Sombra verde */
 }
 
+/* Botón del formulario */
 form button {
-  width: 100%;
-  padding: 12px;
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
   background-color: #4caf50; /* Verde principal */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a mano */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 form button:hover {
   background-color: #388e3c; /* Verde más oscuro */
-  transform: scale(1.05); /* Efecto de agrandamiento */
+  transform: scale(1.05); /* Agrandamiento */
 }
 
 .register-btn {
@@ -139,29 +166,31 @@ form button:hover {
   }
 }
 
+/* Botón de cerrar el modal */
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
+  position: absolute; /* Posición absoluta dentro del modal */
+  top: 10px; /* Posición desde la parte superior */
+  right: 10px; /* Posición desde la derecha */
+  width: 30px; /* Ancho del botón */
+  height: 30px; /* Altura del botón */
   background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
   border: 2px solid #e53935; /* Borde rojo */
-  border-radius: 50%; /* Hace que sea un círculo */
+  border-radius: 50%; /* Forma circular */
   font-size: 1.5rem; /* Tamaño de la "X" */
-  font-weight: bold;
+  font-weight: bold; /* Negrita */
   color: #e53935; /* Rojo vibrante */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer; /* Cambia el cursor a mano */
+  display: flex; /* Usar flexbox para centrar contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
+/* Efecto al pasar el cursor sobre el botón de cerrar */
 .close-btn:hover {
   background: #e53935; /* Fondo rojo sólido */
   color: white; /* Cambia la "X" a blanco */
-  transform: scale(1.2); /* Efecto de agrandamiento */
+  transform: scale(1.2); /* Agrandamiento */
 }
 
 .close-btn:focus {

@@ -1,98 +1,115 @@
 /* 🌱 Footer con verdes y marrones difuminados y animación viva */
 footer {
-  background: linear-gradient(135deg, #5e8b7e, #a58c6f, #d1cfc7); /* verdes + marrones difuminados */
-  color: #fff;
-  text-align: center;
-  padding: 30px 0;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  background: linear-gradient(135deg, #5e8b7e, #a58c6f, #d1cfc7); /* Fondo con degradado de verdes y marrones */
+  color: #fff; /* Texto en blanco */
+  text-align: center; /* Centra el texto */
+  padding: 30px 0; /* Espaciado interno superior e inferior */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-family: 'Poppins', sans-serif; /* Fuente principal */
+  position: relative; /* Posición relativa para manejar elementos internos */
+  bottom: 0; /* Posiciona el footer en la parte inferior */
+  width: 100%; /* Ocupa todo el ancho */
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  overflow: hidden; /* Oculta contenido que se desborde */
 }
 
 /* ✨ Luz animada suave y elegante */
 footer::before {
-  content: "";
-  position: absolute;
-  width: 300%;
-  height: 300%;
-  top: -100%;
-  left: -100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 20%, transparent 70%);
-  animation: sparkles 10s infinite linear;
+  content: ""; /* Elemento decorativo vacío */
+  position: absolute; /* Posición absoluta dentro del footer */
+  width: 300%; /* Ancho del efecto */
+  height: 300%; /* Altura del efecto */
+  top: -100%; /* Posición inicial superior */
+  left: -100%; /* Posición inicial izquierda */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 20%, transparent 70%); /* Fondo con degradado radial */
+  animation: sparkles 10s infinite linear; /* Animación infinita de rotación */
 }
 
 /* 💫 Animación flotante */
 @keyframes sparkles {
-  0% { transform: rotate(0deg); opacity: 0.3; }
-  50% { transform: rotate(180deg); opacity: 0.6; }
-  100% { transform: rotate(360deg); opacity: 0.3; }
+  0% { transform: rotate(0deg); opacity: 0.3; } /* Inicio de la animación */
+  50% { transform: rotate(180deg); opacity: 0.6; } /* Punto medio */
+  100% { transform: rotate(360deg); opacity: 0.3; } /* Fin de la animación */
 }
 
 /* 📝 Texto suave con efecto brillante */
 footer p {
-  margin: 12px 0;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
-  color: #f4f4f4;
+  margin: 12px 0; /* Margen superior e inferior */
+  opacity: 0.85; /* Opacidad inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out; /* Transición suave */
+  color: #f4f4f4; /* Color del texto */
 }
 
 footer p:hover {
-  opacity: 1;
-  transform: scale(1.05);
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  opacity: 1; /* Aumenta la opacidad al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente el texto */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); /* Sombra brillante */
 }
 
 /* 🌐 Redes sociales con un toque natural */
 .footer-socials {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
+  margin-top: 15px; /* Margen superior */
+  display: flex; /* Usar flexbox para organizar los iconos */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  gap: 14px; /* Espaciado entre los iconos */
 }
 
 /* 🌿 Botones con colores tierra y brillo natural */
 .footer-socials a {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #8da68c, #c5a98b);
-  color: #fff;
-  font-size: 22px;
-  text-align: center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-  box-shadow: 0px 0px 12px rgba(120, 90, 60, 0.5);
-  position: relative;
-  overflow: hidden;
+  display: inline-block; /* Elemento en línea con comportamiento de bloque */
+  width: 48px; /* Ancho del botón */
+  height: 48px; /* Altura del botón */
+  line-height: 48px; /* Altura de línea para centrar el contenido */
+  border-radius: 50%; /* Forma circular */
+  background: linear-gradient(135deg, #8da68c, #c5a98b); /* Fondo con degradado */
+  color: #fff; /* Color del icono */
+  font-size: 22px; /* Tamaño del icono */
+  text-align: center; /* Centra el texto */
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease; /* Transiciones suaves */
+  box-shadow: 0px 0px 12px rgba(120, 90, 60, 0.5); /* Sombra inicial */
+  position: relative; /* Posición relativa para manejar elementos internos */
+  overflow: hidden; /* Oculta contenido que se desborde */
 }
 
 /* 🍂 Animación suave y natural al hover */
 .footer-socials a:hover {
-  transform: scale(1.2) rotate(8deg);
-  box-shadow: 0px 0px 20px rgba(180, 160, 130, 0.8);
-  background: linear-gradient(135deg, #c5a98b, #8da68c);
+  transform: scale(1.2) rotate(8deg); /* Agranda y rota el botón al pasar el cursor */
+  box-shadow: 0px 0px 20px rgba(180, 160, 130, 0.8); /* Sombra más intensa */
+  background: linear-gradient(135deg, #c5a98b, #8da68c); /* Cambia el degradado */
 }
 
 /* 🌟 Luz sutil al pasar */
 .footer-socials a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  content: ""; /* Elemento decorativo vacío */
+  position: absolute; /* Posición absoluta dentro del botón */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  top: 0; /* Posición superior */
+  left: 0; /* Posición izquierda */
+  border-radius: 50%; /* Forma circular */
+  background: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+  opacity: 0; /* Opacidad inicial */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves */
 }
 
 .footer-socials a:hover::before {
-  opacity: 1;
-  transform: scale(1.4);
+  opacity: 1; /* Aumenta la opacidad al pasar el cursor */
+  transform: scale(1.4); /* Agranda el efecto */
 }
+
+/*
+### Papel en el proyecto:
+1. **Diseño visual**:
+   - Proporciona un diseño atractivo y moderno para el footer, utilizando degradados, sombras y animaciones suaves.
+
+2. **Interactividad**:
+   - Mejora la experiencia del usuario con efectos de hover en los iconos de redes sociales y el texto.
+
+3. **Consistencia**:
+   - Mantiene una estética coherente con el resto de la aplicación, utilizando colores naturales y transiciones suaves.
+
+4. **Accesibilidad**:
+   - Asegura que los elementos sean visualmente atractivos y fáciles de interactuar, mejorando la usabilidad.
+
+En resumen, este archivo CSS es esencial para garantizar que el footer sea visualmente impactante, funcional y consistente con el diseño general de la aplicación.
+*/

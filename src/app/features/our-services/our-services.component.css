@@ -1,135 +1,158 @@
+/*
+Este archivo CSS define los estilos para el componente `OurServicesComponent`, que tiene como objetivo mostrar los servicios ofrecidos por la plataforma de manera visualmente atractiva y organizada.
+
+### Papel en el proyecto:
+1. **Presentación de servicios**:
+   - Proporciona un diseño limpio y profesional para destacar los servicios disponibles, utilizando tarjetas estilizadas y un carrusel interactivo.
+
+2. **Interactividad**:
+   - Incluye efectos de hover y animaciones suaves para las tarjetas de servicio, mejorando la experiencia del usuario.
+
+3. **Diseño responsivo**:
+   - Adapta los estilos para diferentes tamaños de pantalla, asegurando que el contenido sea accesible en dispositivos móviles y de escritorio.
+
+4. **Estética visual**:
+   - Utiliza fondos degradados, sombras y efectos de desenfoque para crear una interfaz moderna y atractiva.
+
+En resumen, este archivo CSS es esencial para garantizar que la sección de servicios sea visualmente impactante, fácil de navegar y consistente con el diseño general de la aplicación.
+*/
+
 /* Estilos generales */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina padding predeterminado */
+}
   
-  body {
-    font-family: 'Quicksand', sans-serif;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    padding: 180px 20px 60px 20px; /* MÁS ABAJO */
-  }
+body {
+    font-family: 'Quicksand', sans-serif; /* Fuente principal */
+    background: transparent; /* Fondo transparente */
+    display: flex; /* Usar flexbox para organizar contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Alinear elementos al inicio verticalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
+    min-height: 100vh; /* Altura mínima de la ventana */
+    padding: 180px 20px 60px 20px; /* Espaciado interno del cuerpo */
+}
   
-  /* Sección de servicios */
-  .services-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(250, 225, 226, 0.95), rgba(210, 230, 250, 0.95));
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-  }
+/* Sección de servicios */
+.services-section {
+    padding: 80px 20px; /* Espaciado interno de la sección */
+    background: linear-gradient(135deg, rgba(250, 225, 226, 0.95), rgba(210, 230, 250, 0.95)); /* Fondo degradado */
+    text-align: center; /* Centrar texto */
+    position: relative; /* Posición relativa para manejar elementos internos */
+    overflow: hidden; /* Ocultar contenido que se desborde */
+    border-radius: 20px; /* Bordes redondeados */
+}
   
-  /* Fondo animado con luces suaves en movimiento */
-  .services-section::before {
-    content: "";
-    position: absolute;
-    top: -50%; left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 20% 20%, #ffd6ec 0%, transparent 30%),
-                radial-gradient(circle at 80% 30%, #cfefff 0%, transparent 30%),
-                radial-gradient(circle at 50% 80%, #f3e5f5 0%, transparent 40%);
-    background-repeat: no-repeat;
-    animation: luces-movimiento 20s linear infinite;
-    opacity: 0.4;
-    z-index: -1;
-    filter: blur(40px);
-  }
+/* Fondo animado con luces suaves en movimiento */
+.services-section::before {
+    content: ""; /* Elemento decorativo vacío */
+    position: absolute; /* Posición absoluta dentro de la sección */
+    top: -50%; /* Posición superior */
+    left: -50%; /* Posición izquierda */
+    width: 200%; /* Ancho del fondo */
+    height: 200%; /* Altura del fondo */
+    background: radial-gradient(circle at 20% 20%, #ffd6ec 0%, transparent 30%), /* Luces rosadas */
+                radial-gradient(circle at 80% 30%, #cfefff 0%, transparent 30%), /* Luces azules */
+                radial-gradient(circle at 50% 80%, #f3e5f5 0%, transparent 40%); /* Luces moradas */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    animation: luces-movimiento 20s linear infinite; /* Animación de movimiento infinito */
+    opacity: 0.4; /* Transparencia */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+    filter: blur(40px); /* Efecto de desenfoque */
+}
   
-  @keyframes luces-movimiento {
+/* Animación para el fondo de luces */
+@keyframes luces-movimiento {
     0% {
-      transform: translate(0%, 0%) rotate(0deg);
+      transform: translate(0%, 0%) rotate(0deg); /* Posición inicial */
     }
     50% {
-      transform: translate(10%, 10%) rotate(180deg);
+      transform: translate(10%, 10%) rotate(180deg); /* Movimiento intermedio */
     }
     100% {
-      transform: translate(0%, 0%) rotate(360deg);
+      transform: translate(0%, 0%) rotate(360deg); /* Posición final */
     }
-  }
+}
   
-  /* Título */
-  .services-section h2 {
-    font-size: 2.8rem;
-    color: #5a5a5a;
-    margin-bottom: 50px;
-    font-weight: 600;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
-  }
+/* Título de la sección */
+.services-section h2 {
+    font-size: 2.8rem; /* Tamaño de fuente */
+    color: #5a5a5a; /* Color gris oscuro */
+    margin-bottom: 50px; /* Espaciado inferior */
+    font-weight: 600; /* Peso de la fuente */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08); /* Sombra ligera en el texto */
+}
   
-  /* Contenedor del carrusel */
-  .carousel-container {
-    position: relative;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 30px;
-    white-space: nowrap;
-  }
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative; /* Posición relativa para manejar elementos internos */
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding-bottom: 30px; /* Espaciado inferior */
+    white-space: nowrap; /* Evita que los elementos se ajusten en varias líneas */
+}
   
-  /* Pista del carrusel */
-  .carousel-track {
-    display: flex;
-    gap: 30px;
-  }
+/* Pista del carrusel */
+.carousel-track {
+    display: flex; /* Usar flexbox para organizar las tarjetas */
+    gap: 30px; /* Espaciado entre las tarjetas */
+}
   
-  /* Tarjetas de servicio */
-  .card {
-    min-width: 280px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(180, 180, 180, 0.25);
-    backdrop-filter: blur(6px);
-    flex-shrink: 0;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+/* Tarjetas de servicio */
+.card {
+    min-width: 280px; /* Ancho mínimo de las tarjetas */
+    background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
+    border-radius: 18px; /* Bordes redondeados */
+    padding: 25px; /* Espaciado interno */
+    box-shadow: 0 5px 15px rgba(180, 180, 180, 0.25); /* Sombra ligera */
+    backdrop-filter: blur(6px); /* Efecto de desenfoque */
+    flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
+    text-align: center; /* Centrar texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+}
   
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(200, 200, 255, 0.4);
-  }
+/* Efecto al pasar el cursor sobre las tarjetas */
+.card:hover {
+    transform: translateY(-8px); /* Elevar la tarjeta ligeramente */
+    box-shadow: 0 8px 20px rgba(200, 200, 255, 0.4); /* Sombra más pronunciada */
+}
   
-  /* Imágenes iguales */
-  .card img {
-    width: 100%;
-    height: 200px;
-    border-radius: 14px;
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 15px;
-  }
+/* Imágenes dentro de las tarjetas */
+.card img {
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija */
+    border-radius: 14px; /* Bordes redondeados */
+    object-fit: cover; /* Ajustar la imagen al contenedor */
+    object-position: center; /* Centrar la imagen */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
   
-  .card h3 {
-    font-size: 1.4rem;
-    color: #5b5b5b;
-    margin-bottom: 5px;
-    font-weight: 600;
-  }
+/* Títulos de las tarjetas */
+.card h3 {
+    font-size: 1.4rem; /* Tamaño de fuente */
+    color: #5b5b5b; /* Color gris oscuro */
+    margin-bottom: 5px; /* Espaciado inferior */
+    font-weight: 600; /* Peso de la fuente */
+}
   
-  .card p {
-    font-size: 0.95rem;
-    color: #666;
-    margin-top: 10px;
-  }
+/* Descripciones de las tarjetas */
+.card p {
+    font-size: 0.95rem; /* Tamaño de fuente */
+    color: #666; /* Color gris */
+    margin-top: 10px; /* Espaciado superior */
+}
   
-  /* Responsive */
-  @media (max-width: 768px) {
+/* Estilos responsivos */
+@media (max-width: 768px) {
     .card {
-      min-width: 240px;
+      min-width: 240px; /* Reduce el ancho mínimo de las tarjetas */
     }
   
     .services-section h2 {
-      font-size: 2rem;
+      font-size: 2rem; /* Reduce el tamaño del título */
     }
-  }
-  
+}
