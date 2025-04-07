@@ -1,32 +1,54 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+// Importaciones necesarias para el componente
+import { CommonModule } from '@angular/common'; // Módulo común de Angular que incluye directivas como *ngIf y *ngFor
+import { Component, OnInit } from '@angular/core'; // Decorador para definir un componente y la interfaz OnInit
+import { ActivatedRoute } from '@angular/router'; // Servicio para acceder a los parámetros de la ruta activa
 
+/*
+Este archivo define la lógica del componente `ProfileWorkerComponent`, que se encarga de mostrar el perfil detallado de un trabajador seleccionado. Utiliza datos dinámicos para renderizar la información del trabajador en la interfaz.
+
+### Papel en el proyecto:
+1. **Presentación de perfiles dinámicos**:
+   - Muestra información específica de cada trabajador, como nombre, rol, ubicación, funciones, teléfono y correo electrónico, utilizando datos obtenidos dinámicamente.
+
+2. **Navegación basada en rutas**:
+   - Utiliza el servicio `ActivatedRoute` para capturar el ID del trabajador desde la URL, lo que permite mostrar el perfil correspondiente.
+
+3. **Modularidad y reutilización**:
+   - Este componente es independiente (`standalone`), lo que facilita su reutilización en diferentes partes de la aplicación sin depender de un módulo específico.
+
+4. **Conexión con la interfaz de usuario**:
+   - Conecta la lógica de Angular con la interfaz visual definida en el archivo HTML, asegurando que los datos dinámicos se reflejen correctamente en la vista.
+
+En resumen, este componente es esencial para proporcionar una experiencia personalizada al usuario, mostrando perfiles detallados de los trabajadores disponibles en la plataforma y permitiendo una navegación fluida basada en rutas.
+*/
+
+// Decorador que define el componente
 @Component({
-  selector: 'app-profile-worker',
-  imports: [CommonModule],
-  standalone: true,
-  templateUrl: './profile-worker.component.html',
-  styleUrls: ['./profile-worker.component.css']
+  selector: 'app-profile-worker', // Selector del componente, utilizado para incluirlo en otras plantillas
+  imports: [CommonModule], // Módulos importados para usar funcionalidades comunes de Angular
+  standalone: true, // Indica que este componente es independiente y no depende de un módulo específico
+  templateUrl: './profile-worker.component.html', // Archivo HTML asociado al componente
+  styleUrls: ['./profile-worker.component.css'] // Archivo CSS asociado al componente
 })
 export class ProfileWorkerComponent implements OnInit {
+  // Propiedades del componente
   workerId: string | null = null; // ID del trabajador capturado de la URL
   workerData: any = null; // Datos del trabajador actual
 
   // Datos de los trabajadores
   workers = {
     claudia: {
-      name: 'Claudia',
-      role: 'Especialista en instalación de paneles solares',
-      location: '📍 Ciudad de México',
-      phone: '+52 55 1234 5678',
-      email: 'claudia@example.com',
+      name: 'Claudia', // Nombre del trabajador
+      role: 'Especialista en instalación de paneles solares', // Rol del trabajador
+      location: '📍 Ciudad de México', // Ubicación del trabajador
+      phone: '+52 55 1234 5678', // Teléfono del trabajador
+      email: 'claudia@example.com', // Email del trabajador
       functions: [
-        'Instalación de paneles solares residenciales.',
-        'Asesoramiento en proyectos de energía solar.',
-        'Mantenimiento de sistemas solares.'
+        'Instalación de paneles solares residenciales.', // Función 1
+        'Asesoramiento en proyectos de energía solar.', // Función 2
+        'Mantenimiento de sistemas solares.' // Función 3
       ],
-      image: 'assets/customers/claudia.jpg'
+      image: 'assets/customers/claudia.jpg' // Ruta de la imagen del trabajador
     },
     margaret: {
       name: 'Margaret',
@@ -147,11 +169,17 @@ export class ProfileWorkerComponent implements OnInit {
     }
   };
 
-  constructor(private route: ActivatedRoute) {}
+  // Constructor para inicializar dependencias
+  constructor(private route: ActivatedRoute) {} // Inyecta el servicio ActivatedRoute para acceder a los parámetros de la URL
 
+  // Método que se ejecuta al inicializar el componente
   ngOnInit(): void {
+    // Obtiene el ID del trabajador desde los parámetros de la URL
     this.workerId = this.route.snapshot.paramMap.get('id');
+
+    // Verifica si el ID existe en el objeto `workers`
     if (this.workerId && this.workerId in this.workers) {
+      // Asigna los datos del trabajador correspondiente a la propiedad `workerData`
       this.workerData = this.workers[this.workerId as keyof typeof this.workers];
     }
   }

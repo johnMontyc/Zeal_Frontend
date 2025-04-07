@@ -1,145 +1,175 @@
+/*
+Este archivo CSS define los estilos para el componente `ProfileWorkerComponent`, que tiene como objetivo mostrar el perfil detallado de un trabajador de manera visualmente atractiva y organizada.
+
+### Papel en el proyecto:
+1. **Presentación del perfil**:
+   - Proporciona un diseño limpio y profesional para mostrar la información del trabajador, como su imagen, nombre, rol, ubicación y funciones.
+
+2. **Interactividad**:
+   - Incluye efectos de hover en elementos como la imagen de perfil, las funciones y los botones, mejorando la experiencia del usuario.
+
+3. **Diseño responsivo**:
+   - Adapta los estilos para diferentes tamaños de pantalla, asegurando que el contenido sea accesible en dispositivos móviles y de escritorio.
+
+4. **Estética visual**:
+   - Utiliza degradados, sombras y transiciones suaves para crear una interfaz moderna y atractiva.
+
+En resumen, este archivo CSS es esencial para garantizar que la sección de perfil de los trabajadores sea visualmente impactante, fácil de navegar y consistente con el diseño general de la aplicación.
+*/
+
+/* Estilo principal del contenedor del perfil */
 .profile-worker {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 150px;
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 60px auto; /* Centrar el contenedor horizontalmente y agregar margen superior/inferior */
+  padding: 150px; /* Espaciado interno */
   background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Fondo con degradado */
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-  font-family: 'Quicksand', sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  font-family: 'Quicksand', sans-serif; /* Fuente principal */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
 }
 
+/* Efecto al pasar el cursor sobre el contenedor */
 .profile-worker:hover {
-  transform: scale(1.02); /* Efecto de agrandamiento */
+  transform: scale(1.02); /* Agrandamiento ligero */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 8px 8px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
 }
 
+/* Encabezado del perfil */
 .profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  display: flex; /* Usar flexbox para organizar los elementos */
+  align-items: center; /* Alinear verticalmente los elementos */
+  margin-bottom: 20px; /* Espaciado inferior */
 }
 
+/* Imagen de perfil */
 .profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-  border: 4px solid #1e88e5; /* Azul principal */
+  width: 150px; /* Ancho de la imagen */
+  height: 150px; /* Altura de la imagen */
+  border-radius: 50%; /* Imagen redonda */
+  object-fit: cover; /* Ajustar la imagen al contenedor */
+  margin-right: 20px; /* Espaciado derecho */
+  border: 4px solid #1e88e5; /* Borde azul */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
+/* Efecto al pasar el cursor sobre la imagen */
 .profile-picture:hover {
   transform: rotate(5deg) scale(1.1); /* Rotación y agrandamiento */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
 
+/* Información del perfil */
 .profile-info h2 {
-  margin: 0;
-  font-size: 2rem;
+  margin: 0; /* Sin margen */
+  font-size: 2rem; /* Tamaño de fuente */
   color: #1e88e5; /* Azul principal */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra en el texto */
 }
 
 .profile-info .role {
-  font-size: 1.2rem;
-  color: #555;
-  font-style: italic;
+  font-size: 1.2rem; /* Tamaño de fuente */
+  color: #555; /* Color gris oscuro */
+  font-style: italic; /* Texto en cursiva */
 }
 
 .profile-info .location {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1rem; /* Tamaño de fuente */
+  color: #777; /* Color gris claro */
 }
 
+/* Títulos de las secciones de funciones y detalles */
 .profile-functions h3,
 .profile-details h3 {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  margin-top: 20px; /* Espaciado superior */
+  font-size: 1.5rem; /* Tamaño de fuente */
   color: #1e88e5; /* Azul principal */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #1e88e5; /* Línea decorativa */
-  display: inline-block;
-  padding-bottom: 5px;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  border-bottom: 2px solid #1e88e5; /* Línea decorativa debajo del texto */
+  display: inline-block; /* Mantener el ancho ajustado al contenido */
+  padding-bottom: 5px; /* Espaciado inferior */
 }
 
+/* Lista de funciones */
 .profile-functions ul {
-  list-style: disc;
-  padding-left: 20px;
-  color: #555;
+  list-style: disc; /* Estilo de lista con viñetas */
+  padding-left: 20px; /* Espaciado izquierdo */
+  color: #555; /* Color gris oscuro */
 }
 
 .profile-functions ul li {
-  margin-bottom: 10px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 10px; /* Espaciado inferior entre elementos */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para hover */
 }
 
+/* Efecto al pasar el cursor sobre los elementos de la lista */
 .profile-functions ul li:hover {
-  color: #1e88e5; /* Azul principal */
-  transform: translateX(5px); /* Movimiento hacia la derecha */
+  color: #1e88e5; /* Cambia el color a azul */
+  transform: translateX(5px); /* Mueve el elemento ligeramente hacia la derecha */
 }
 
+/* Detalles del perfil */
 .profile-details p {
-  margin: 5px 0;
-  color: #555;
-  transition: color 0.3s ease;
+  margin: 5px 0; /* Espaciado superior e inferior */
+  color: #555; /* Color gris oscuro */
+  transition: color 0.3s ease; /* Transición suave para hover */
 }
 
+/* Efecto al pasar el cursor sobre los detalles */
 .profile-details p:hover {
-  color: #1e88e5; /* Azul principal */
+  color: #1e88e5; /* Cambia el color a azul */
 }
 
-.profile-actions {
-  text-align: center;
-  margin-top: 20px;
-}
-
+/* Botón de acción */
 .message-btn {
-  padding: 12px 25px;
+  padding: 12px 25px; /* Espaciado interno */
   background: linear-gradient(145deg, #1e88e5, #1565c0); /* Degradado azul */
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 30px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor a mano */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 .message-btn:hover {
   background: linear-gradient(145deg, #1565c0, #1e88e5); /* Inversión del degradado */
   transform: scale(1.1); /* Agrandamiento */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
 
+/* Efecto al hacer clic en el botón */
 .message-btn:active {
-  transform: scale(0.95); /* Efecto de clic */
+  transform: scale(0.95); /* Reducción ligera */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
 }
 
+/* Mensaje de registro */
 .register-message {
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 10px; /* Espaciado superior */
+  padding: 10px; /* Espaciado interno */
   background: linear-gradient(145deg, #e8f5e9, #c8e6c9); /* Degradado verde */
   color: #388e3c; /* Verde oscuro */
-  border: 1px solid #388e3c;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  text-align: center;
-  animation: fadeIn 0.5s ease-in-out;
+  border: 1px solid #388e3c; /* Borde verde oscuro */
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 0.9rem; /* Tamaño de fuente */
+  text-align: center; /* Centrar texto */
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
 }
 
+/* Animación de entrada */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(-10px);
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(-10px); /* Posición inicial */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Posición final */
   }
 }

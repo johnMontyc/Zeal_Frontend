@@ -1,40 +1,64 @@
+/* Estilos principales para el encabezado */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #2e7d32; /* Verde oscuro */
-  color: white;
+  display: flex; /* Usa flexbox para organizar los elementos horizontalmente */
+  justify-content: space-between; /* Espacia los elementos al máximo posible */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  padding: 10px 20px; /* Espaciado interno del encabezado */
+  background-color: #2e7d32; /* Fondo verde oscuro */
+  color: white; /* Texto en color blanco */
 }
 
+/* Estilo para el logo del encabezado */
 header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Texto en negrita */
 }
 
+/* Estilos para la barra de navegación */
 header nav {
-  display: flex;
-  gap: 15px;
+  display: flex; /* Usa flexbox para organizar los enlaces horizontalmente */
+  gap: 15px; /* Espaciado entre los enlaces */
 }
 
+/* Estilos generales para los enlaces de navegación */
 header nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Texto en color blanco */
+  font-weight: 600; /* Texto en seminegrita */
+  padding: 8px 16px; /* Espaciado interno de los enlaces */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves para hover */
 }
 
+/* Estilo específico para el botón de inicio de sesión */
 header nav a.login-btn {
-  background-color: #4caf50; /* Verde claro */
+  background-color: #4caf50; /* Fondo verde claro */
 }
 
+/* Estilo específico para el botón de registro */
 header nav a.register-btn {
-  background-color: #81c784; /* Verde más suave */
+  background-color: #81c784; /* Fondo verde más suave */
 }
 
+/* Efecto hover para los enlaces de navegación */
 header nav a:hover {
-  background-color: #388e3c; /* Verde más oscuro */
-  transform: scale(1.05); /* Efecto de agrandamiento */
+  background-color: #388e3c; /* Fondo verde más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente el enlace */
 }
+
+/*
+### Papel en el proyecto:
+1. **Diseño del encabezado**:
+   - Proporciona un diseño limpio y organizado para el encabezado de la aplicación, que incluye el logo, la barra de navegación y los botones de autenticación.
+
+2. **Interactividad**:
+   - Mejora la experiencia del usuario con efectos de hover en los enlaces, como cambios de color y escalado.
+
+3. **Consistencia visual**:
+   - Utiliza una paleta de colores verdes para mantener la coherencia con el diseño general de la aplicación.
+
+4. **Accesibilidad**:
+   - Los enlaces y botones están diseñados para ser claros y fáciles de interactuar, mejorando la usabilidad.
+
+En resumen, este archivo CSS define los estilos del encabezado de la aplicación, asegurando que sea visualmente atractivo, funcional y consistente con el diseño general.
+*/

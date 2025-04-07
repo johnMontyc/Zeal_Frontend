@@ -1,8 +1,25 @@
-<div class="container">
-  <app-header></app-header>
+<div class="container"> <!-- Contenedor principal que organiza la estructura de la aplicación -->
+  <app-header></app-header> <!-- Componente del encabezado que contiene la barra de navegación y enlaces principales -->
   <main>
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> <!-- Punto de anclaje para cargar dinámicamente los componentes según la ruta activa -->
   </main>
   
-  <app-footer></app-footer>
+  <app-footer></app-footer> <!-- Componente del pie de página que muestra información adicional y enlaces secundarios -->
 </div>
+
+<!--
+### Papel en el proyecto:
+1. **Estructura principal de la aplicación**:
+   - Este archivo define la estructura base de la aplicación, organizando los componentes principales como el encabezado, el contenido dinámico y el pie de página.
+
+2. **Navegación dinámica**:
+   - Utiliza `<router-outlet>` para cargar los componentes correspondientes a las rutas definidas en el enrutador de Angular.
+
+3. **Modularidad**:
+   - Incluye componentes reutilizables (`app-header` y `app-footer`) para mantener la consistencia visual y funcional en toda la aplicación.
+
+4. **Diseño organizado**:
+   - El contenedor principal (`<div class="container">`) asegura que todos los elementos estén bien estructurados y alineados.
+
+En resumen, este archivo HTML actúa como la plantilla principal de la aplicación, proporcionando una estructura clara y organizada para los componentes y el contenido dinámico.
+-->

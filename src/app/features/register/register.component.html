@@ -9,6 +9,29 @@
 </head>
 <body>
 
+  <!--
+  Este archivo HTML define la estructura del componente `RegisterComponent`, que tiene como objetivo proporcionar un formulario para que los usuarios se registren en la plataforma.
+
+  ### Papel en el proyecto:
+  1. **Registro de usuarios**:
+     - Permite a los usuarios ingresar su información personal, como nombre completo, número de identificación, dirección y teléfono, para registrarse en la plataforma.
+
+  2. **Validaciones básicas**:
+     - Incluye validaciones en los campos del formulario, como campos obligatorios y patrones para asegurar que ciertos campos solo acepten números.
+
+  3. **Interactividad**:
+     - Al enviar el formulario, se ejecuta el método `onRegister` definido en el archivo TypeScript.
+     - Incluye un enlace que redirige al formulario de inicio de sesión, llamando a los métodos `showLoginMessage` y `navigateToLogin`.
+
+  4. **Mensajes dinámicos**:
+     - Muestra un mensaje de registro exitoso utilizando la directiva `*ngIf` para verificar si la variable `registerMessage` tiene un valor.
+
+  5. **Diseño responsivo**:
+     - Está diseñado para ser responsivo y utiliza estilos definidos en `register.component.css` para mejorar la experiencia del usuario.
+
+  En resumen, este archivo es esencial para manejar el flujo de registro de nuevos usuarios en la plataforma, proporcionando una interfaz clara y funcional.
+  -->
+
   <div class="register-container">
     <h2>Crear Cuenta</h2>
     <form (submit)="onRegister($event)">
